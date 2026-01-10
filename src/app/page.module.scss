@@ -32,9 +32,10 @@
 
 
 
-.content {
+.content,
+.blogPost {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 720px;
   width: 100%;
   padding: 24px;
 }
@@ -118,4 +119,8 @@
     --button-secondary-hover: #f2f2f2;
     --button-secondary-border: #ebebeb;
   }
+}
+
+.page pre div {
+  border-radius: 4px;
 }

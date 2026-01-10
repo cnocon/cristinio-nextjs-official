@@ -4,6 +4,7 @@ import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
+import { a11yLight} from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 // process.cwd() resolves to the repo root when the app runs.
 // Joining content/blog ensures it points to a top-level content/blog directory regardless of OS path separators.
@@ -40,7 +41,7 @@ const components = {
   code: ({ inline, className, children, ...props }) => {
     const match = /language-(\w+)/.exec(className || "");
     return !inline && match ? (
-      <SyntaxHighlighter language={match[1]} PreTag="div" {...props}>
+      <SyntaxHighlighter language={match[1]} style={a11yLight} PreTag="div" {...props}>
         {String(children).replace(/\n$/, "")}
       </SyntaxHighlighter>
     ) : (
@@ -58,7 +59,7 @@ export default async function Page({ params }) {
   const { frontmatter, content } = await getPostBySlug(slug);
 
   return (
-    <section className={styles.page}>
+    <section className={`${styles.page} ${styles.blogPost}`}>
       <header className={styles.header}>
         <h2 className={styles["page-title"]}>{frontmatter.title}</h2>
       </header>
