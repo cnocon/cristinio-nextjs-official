@@ -34,18 +34,31 @@ export default async function Page() {
 
   return (
     <section className={styles.page}>
-      <header className={styles["header"]}>
+      <header className={styles.header}>
         <h2 className={styles["page-title"]}>Blog</h2>
       </header>
 
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-            {post.description && <p>{post.description}</p>}
-          </li>
-        ))}
-      </ul>
+      <div className={styles.content}>
+        <ul className={styles.postList}>
+          {posts.map((post) => (
+            <li key={post.slug} className={styles.postItem}>
+              <Link className={styles.postLink} href={`/blog/${post.slug}`}>
+                <div className={styles.postMeta}>
+                  <span className={styles.postTitle}>{post.title}</span>
+                  {post.date && (
+                    <time className={styles.postDate} dateTime={post.date}>
+                      {post.date}
+                    </time>
+                  )}
+                </div>
+                {post.description && (
+                  <p className={styles.postDescription}>{post.description}</p>
+                )}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

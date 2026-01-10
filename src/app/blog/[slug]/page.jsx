@@ -3,6 +3,7 @@ import styles from "../../page.module.scss";
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 // process.cwd() resolves to the repo root when the app runs.
 // Joining content/blog ensures it points to a top-level content/blog directory regardless of OS path separators.
