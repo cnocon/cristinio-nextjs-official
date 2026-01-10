@@ -1,5 +1,6 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import styles from "../../page.module.scss";
+import blogPostStyles from "./blog-post.module.scss";
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
@@ -36,8 +37,8 @@ export async function generateStaticParams() {
 
 
 const components = {
-  h1: (props) => <h1 className="my-heading" {...props} />,
-  a: (props) => <a className="my-link" {...props} />,
+  h1: (props) => <h1 className={blogPostStyles.title} {...props} />,
+  a: (props) => <a className={blogPostStyles.link} {...props} />,
   code: ({ inline, className, children, ...props }) => {
     const match = /language-(\w+)/.exec(className || "");
     return !inline && match ? (
@@ -59,7 +60,7 @@ export default async function Page({ params }) {
   const { frontmatter, content } = await getPostBySlug(slug);
 
   return (
-    <section className={`${styles.page} ${styles.blogPost}`}>
+    <section className={`${styles.page} ${blogPostStyles.blogPost}`}>
       <header className={styles.header}>
         <h2 className={styles["page-title"]}>{frontmatter.title}</h2>
       </header>

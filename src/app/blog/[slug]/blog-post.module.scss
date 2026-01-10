@@ -1,0 +1,23 @@
+.blogPost {
+  margin: 0 auto;
+  max-width: 720px;
+  width: 100%;
+  padding: 24px;
+}
+
+.blogPost pre div {
+  border-radius: 4px;
+}
+
+.blogPost .title {
+  font-weight: 500;
+  font-size: 1.75rem;
+  font-family: var(--font-lato);
+  padding: 2px 12px;
+  border-radius: 4px;
+}
+
+.blogPost .link {
+  color: inherit;
+  text-decoration: underline;
+}

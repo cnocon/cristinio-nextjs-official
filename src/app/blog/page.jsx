@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import styles from "../page.module.scss";
+import blogStyles from "./blog.module.scss";
 
 const contentDir = path.join(process.cwd(), "content", "blog");
 
@@ -39,20 +40,20 @@ export default async function Page() {
       </header>
 
       <div className={styles.content}>
-        <ul className={styles.postList}>
+        <ul className={blogStyles.postList}>
           {posts.map((post) => (
-            <li key={post.slug} className={styles.postItem}>
-              <Link className={styles.postLink} href={`/blog/${post.slug}`}>
-                <div className={styles.postMeta}>
-                  <span className={styles.postTitle}>{post.title}</span>
+            <li key={post.slug} className={blogStyles.postItem}>
+              <Link className={blogStyles.postLink} href={`/blog/${post.slug}`}>
+                <div className={blogStyles.postMeta}>
+                  <span className={blogStyles.postTitle}>{post.title}</span>
                   {post.date && (
-                    <time className={styles.postDate} dateTime={post.date}>
+                    <time className={blogStyles.postDate} dateTime={post.date}>
                       {post.date}
                     </time>
                   )}
                 </div>
                 {post.description && (
-                  <p className={styles.postDescription}>{post.description}</p>
+                  <p className={blogStyles.postDescription}>{post.description}</p>
                 )}
               </Link>
             </li>
