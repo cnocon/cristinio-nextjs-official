@@ -1,5 +1,5 @@
 import { Oswald, Lato } from "next/font/google";
-import styles from "./ui/global.scss";
+import styles from "./ui/global.module.scss";
 import Header from "./ui/header"
 import Footer from "./ui/footer"
 
@@ -26,7 +26,7 @@ export default function RootLayout({children}) {
       <body
         className={`body ${lato.variable} ${oswald.variable}`}>
         <Header />
-        <main>{children}</main>
+        <main className={styles["main"]}>{children}</main>
         <Footer />
       </body>
     </html>

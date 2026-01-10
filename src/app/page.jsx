@@ -1,8 +1,11 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 
 export default function Page() {
   return (
-    <h2>Home Page</h2>
-  );
+    <section className={styles['page']}>
+      <header className={styles['header']}>
+        <h2 className={styles['page-title']}>Home Page</h2>
+      </header>
+    </section>
+  )
 }

@@ -1,3 +1,11 @@
+import styles from "../page.module.scss";
+
 export default function Page() {
-  return<h2>Portfolio Page</h2>
+  return (
+    <section className={styles.page}>
+      <header className={styles['header']}>
+        <h2 className={styles['page-title']}>Portfolio Page</h2>
+      </header>
+    </section>
+  )
 }
