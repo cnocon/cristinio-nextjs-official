@@ -1,0 +1,69 @@
+.site-header {
+  display: grid;
+  justify-items: center;
+  row-gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.site-title {
+  text-align: center;
+  margin: 0 auto 8px;
+  padding: 0;
+}
+
+.site-title a .avatar {
+  display: block;;
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color:light-dark((hsla(158, 100%, 10%, 1)),hsla(158, 100%, 62%, 0.85) );
+  background-color: light-dark((hsla(158, 100%, 68%, 1)),hsla(158, 100%, 62%, 0.85) );
+}
+
+.site-title a {
+  display: block;
+  padding: 0;
+  margin: 10px 0;
+  font-family: var(--font-oswald);
+  font-size: 2rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: light-dark(hsl(0, 0%, 13%), #fff);
+
+  &:hover {
+    span {
+      background-color: light-dark((hsla(158, 100%, 75%, 1)),hsla(158, 100%, 62%, 0.85) );
+    }
+
+    img {
+      border-color:light-dark((hsla(158, 100%, 10%, .25)),hsla(158, 100%, 62%, 0.85) );
+    }
+  }
+
+  span {
+    display: block;
+    padding: 4px 12px;
+    margin: .5rem 0;
+    border-radius: 4px;;
+  }
+
+
+  p {
+    padding: 0;
+    line-height: 1;
+    margin: 0;
+    text-transform: none;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: light-dark(#111,hsla(158, 100%, 62%, 0.85) );
+    font-style: italic;
+    font-size: 1.25rem;
+  }
+}
