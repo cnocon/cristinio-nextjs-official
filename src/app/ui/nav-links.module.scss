@@ -32,25 +32,24 @@
     &[aria-current="page"] {
       font-weight: 600;
       color: hsl(0, 0%, 0%);
-      // background-color: light-dark(hsla(158, 100%, 73%, 0.49),hsla(158, 100%, 62%, 0.85) );
-      // border-width: light-dark(1px, 1px);
-      // border-style: solid;
-      // border-color:light-dark((hsla(158, 100%, 30%, 1)),hsla(158, 100%, 62%, 0.85) );
       border-width: 1px;
       border-style: solid;
-      // border-color:light-dark((hsla(158, 100%, 42%, 1)),hsla(158, 100%, 62%, 0.85) );
-      // background-color: light-dark((hsla(158, 100%, 75%, 1)),hsla(158, 100%, 62%, 0.85) );
       border-color: hsl(168.91deg 56.1% 27.84%);
-  // background-color: light-dark((hsla(158, 100%, 68%, 1)),hsla(158, 100%, 62%, 0.85) );
       background-color: hsl(168.91deg 56.1% 67.84%);
+
+      &:hover {
+        color: #222;
+      }
     }
 
     &:hover {
-      color: light-dark(hsl(0, 0%, 13%), #222);
+      color: light-dark(hsl(0, 0%, 13%), #efefef);
       border-color: light-dark(var(--lightningcss-light, #003320) var(--lightningcss-dark, #3dffb8d9));
     }
 
-    &:focus {
+    &:focus,
+    &:active,
+    &:focus-visible {
       outline: none;
       border-color: transparent;
     }
