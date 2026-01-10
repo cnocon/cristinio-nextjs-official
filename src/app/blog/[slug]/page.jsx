@@ -37,6 +37,18 @@ export async function generateStaticParams() {
 const components = {
   h1: (props) => <h1 className="my-heading" {...props} />,
   a: (props) => <a className="my-link" {...props} />,
+  code: ({ inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || "");
+    return !inline && match ? (
+      <SyntaxHighlighter language={match[1]} PreTag="div" {...props}>
+        {String(children).replace(/\n$/, "")}
+      </SyntaxHighlighter>
+    ) : (
+      <code className={className} {...props}>
+        {children}
+      </code>
+    );
+  },
   // Add more overrides as needed
 };
 
@@ -47,7 +59,7 @@ export default async function Page({ params }) {
 
   return (
     <section className={styles.page}>
-      <header className={styles["header"]}>
+      <header className={styles.header}>
         <h2 className={styles["page-title"]}>{frontmatter.title}</h2>
       </header>
 
