@@ -23,7 +23,6 @@
   border-width: 1px;
   border-style: solid;
   border-color: hsl(168.91deg 56.1% 27.84%);
-  // background-color: light-dark((hsla(158, 100%, 68%, 1)),hsla(158, 100%, 62%, 0.85) );
   background-color: hsl(168.91deg 56.1% 67.84%);
 }
 
@@ -41,11 +40,12 @@
   &:hover {
     span {
       color: light-dark(hsl(0, 0%, 13%), #222);
-      background-color: light-dark((hsla(158, 100%, 75%, 1)),hsla(158, 100%, 62%, 0.85) );
+      background-color: hsl(168.91deg 56.1% 67.84%);
+      border: 1px solid transparent
     }
 
     img {
-      border-color:light-dark((hsla(158, 100%, 10%, .25)),hsla(158, 100%, 62%, 0.85) );
+      border-color: hsl(168.91deg 56.1% 27.84%);
     }
   }
 
@@ -53,7 +53,8 @@
     display: block;
     padding: 4px 12px;
     margin: .5rem 0;
-    border-radius: 4px;;
+    border-radius: 4px;
+    border: 1px solid transparent;
   }
 
 
