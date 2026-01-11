@@ -12,7 +12,7 @@
 }
 
 .site-title a .avatar {
-  display: block;;
+  display: block;
   width: 100%;
   height: auto;
   max-height: 150px;
@@ -22,8 +22,8 @@
   border-radius: 50%;
   border-width: 1px;
   border-style: solid;
-  border-color: hsl(168.91deg 56.1% 27.84%);
-  background-color: hsl(168.91deg 56.1% 67.84%);
+  border-color: var(--border-primary);
+  background-color: var(--color-primary);
 }
 
 .site-title a {
@@ -35,17 +35,17 @@
   text-decoration: none;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: light-dark(hsl(0, 0%, 13%), #fff);
+  color: light-dark(var(--text-light), var(--text-dark));
 
   &:hover {
     span {
-      color: light-dark(hsl(0, 0%, 13%), #222);
-      background-color: hsl(168.91deg 56.1% 67.84%);
-      border: 1px solid transparent
+      color: var(--text-light);
+      background-color: var(--color-primary);
+      border: 1px solid transparent;
     }
 
     img {
-      border-color: hsl(168.91deg 56.1% 27.84%);
+      border-color: var(--border-primary);
     }
   }
 
@@ -65,9 +65,7 @@
     text-transform: none;
     font-weight: 400;
     font-family: "Lato", sans-serif;
-    color: light-dark(rgb(17, 17, 17), rgb(17, 17, 17)rgb(61, 255, 184));
-    // color: light-dark(hsl(257, 100%, 10%), (hsla(257, 100%, 85%,1)) );
-    color: light-dark(#111,hsla(158, 100%, 95%, 1) );
+    color: light-dark(var(--text-light), var(--text-dark));
     font-style: italic;
     font-size: 1.25rem;
   }

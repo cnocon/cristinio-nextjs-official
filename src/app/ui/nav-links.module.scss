@@ -29,21 +29,24 @@
     text-decoration: none;
 
     &[aria-current="page"] {
-      font-weight: 600;
-      color: hsl(0, 0%, 0%);
+      color: var(--text-light);
       border-width: 1px;
       border-style: solid;
-      border-color: hsl(168.91deg 56.1% 27.84%);
-      background-color: hsl(168.91deg 56.1% 67.84%);
+      border-color: var(--border-primary);
+      background-color: var(--color-primary);
 
-      &:hover {
-        color: #222;
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus-visible {
+        color: var(--text-light);
+        border: 1px solid transparent;
       }
     }
 
     &:hover {
-      color: light-dark(hsl(0, 0%, 13%), #efefef);
-      border-color: light-dark(var(--lightningcss-light, #003320) var(--lightningcss-dark, #3dffb8d9));
+      color: light-dark(var(--text-light), var(--text-dark));
+      border-color: light-dark(#003320, #efefef);
     }
 
     &:focus,

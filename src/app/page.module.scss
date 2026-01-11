@@ -1,6 +1,4 @@
 .page {
-  // --background: #fafafa;
-  // --foreground: #fff;
 
   --text-primary: #000;
   --text-secondary: #666;
@@ -23,14 +21,12 @@
     font-weight: 500;
     font-size: 1.75rem;
     font-family: var(--font-lato);
-    // color: var(--text-primary);
-    // background-color: light-dark((hsla(257, 100%, 80%, .5)),hsl(257, 100%, 10%) );
     padding: 2px 12px;
     border-radius: 4px;
   }
 }
 
-.content{
+.content {
   margin: 0 auto;
   max-width: 720px;
   width: 100%;

@@ -1,4 +1,12 @@
 :root {
+  --text-light: hsl(0, 0%, 13%);
+  --text-dark: #efefef;
+
+  --border-primary: hsl(168.91deg 56.1% 27.84%);
+  --color-primary: hsl(168.91deg 56.1% 67.84%);
+  --background-light: #fafafa;
+  --background-dark: #242424;
+
   font-family: var(--font-lato), Helvetica, Arial, sans-serif;
 
   font-size: 16px;
@@ -6,8 +14,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: light-dark(#222, rgba(255, 255, 255, 0.87));
-  background-color: light-dark(#fff, #242424);
+  color: light-dark(var(--text-light), var(--text-dark));
+  background-color: light-dark(var(--background-light), var(--background-dark));
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,15 +42,7 @@ html,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.main {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .body * {
-
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -51,4 +51,11 @@ html,
 .body a {
   color: inherit;
   text-decoration: none;
+}
+
+.main {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
