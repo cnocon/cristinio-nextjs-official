@@ -8,8 +8,8 @@
 
 .postItem {
   border: 1px solid var(--border-primary);
-  border-radius: 12px;
-  background: var(--foreground);
+  border-radius: 8px;
+  background: var(--background-light);
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
