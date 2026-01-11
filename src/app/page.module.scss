@@ -28,36 +28,8 @@
 
 .content {
   margin: 0 auto;
-  max-width: 720px;
   width: 100%;
+  max-width: 720px;
   padding: 24px;
-}
-
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --background: #000;
-    --foreground: #fafafa;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .page {
-    --background: #fafafa;
-    --foreground: #fff;
-
-    --text-primary: #000;
-    --text-secondary: #666;
-
-    --button-primary-hover: #383838;
-    --button-secondary-hover: #f2f2f2;
-    --button-secondary-border: #ebebeb;
-  }
+  overflow-x: hidden;
 }

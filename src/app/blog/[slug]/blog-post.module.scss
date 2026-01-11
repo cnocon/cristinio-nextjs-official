@@ -1,13 +1,21 @@
 .blogPost {
   margin: 0 auto;
-  max-width: 720px;
-  width: 100%;
+  max-width: calc(720px - 48px);
+  width: calc(100% - 48px);
   padding: 24px;
+  box-sizing: border-box;
+}
+
+.blogPost pre {
+  overflow-x: scroll;
+  max-width: 100%;
+  display: block;
 }
 
 .blogPost pre div {
   border-radius: 4px;
 }
+
 
 .blogPost .title {
   font-weight: 500;
