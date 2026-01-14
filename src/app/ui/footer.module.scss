@@ -1,6 +1,7 @@
 .footer {
   display: grid;
   justify-items: center;
-  row-gap: 1rem;
-  margin-bottom: 3rem;
+  row-gap: var(--space-4);
+  margin-bottom: var(--space-9);
+  color: var(--text-2);
 }

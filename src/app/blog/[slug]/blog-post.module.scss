@@ -1,9 +1,15 @@
 .blogPost {
   margin: 0 auto;
-  max-width: calc(720px - 48px);
+  max-width: var(--content-max);
   width: calc(100% - 48px);
-  padding: 24px;
+  padding: var(--space-6);
   box-sizing: border-box;
+  background: var(--surface-2);
+  border-radius: var(--radius-3);
+  border: 1px solid var(--border-1);
+  box-shadow: var(--shadow-1);
+  display: grid;
+  gap: var(--space-6);
 }
 
 .blogPost pre {
@@ -13,19 +19,38 @@
 }
 
 .blogPost pre div {
-  border-radius: 4px;
+  border-radius: var(--radius-2);
 }
 
+.blogPost article {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.blogPost article p {
+  margin: 0;
+  color: var(--text-2);
+  line-height: var(--line-height-loose);
+}
+
+.blogPost article h2,
+.blogPost article h3 {
+  margin: 0;
+  color: var(--text-1);
+}
 
 .blogPost .title {
-  font-weight: 500;
-  font-size: 1.75rem;
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-2xl);
   font-family: var(--font-lato);
-  padding: 2px 12px;
-  border-radius: 4px;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-2);
+  background: var(--surface-3);
+  border: 1px solid var(--border-1);
 }
 
 .blogPost .link {
-  color: inherit;
+  color: var(--text-1);
   text-decoration: underline;
+  text-decoration-color: var(--accent-2);
 }

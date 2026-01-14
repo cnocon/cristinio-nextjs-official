@@ -3,50 +3,53 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 16px;
+  gap: var(--space-4);
 }
 
 .postItem {
-  border: 1px solid var(--border-primary);
-  border-radius: 8px;
-  background: var(--background-light);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-3);
+  background: var(--surface-2);
+  box-shadow: var(--shadow-1);
+  transition: border-color var(--duration-base) var(--ease-standard),
+    transform var(--duration-base) var(--ease-pop),
+    box-shadow var(--duration-base) var(--ease-standard);
 
   &:hover {
-    border-color: var(--border-primary);
+    border-color: var(--accent-3);
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-2);
   }
 }
 
 .postLink {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px 20px;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-6);
   text-decoration: none;
-  color: var(--text-light);
+  color: var(--text-1);
 }
 
 .postMeta {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
-  font-weight: 600;
+  gap: var(--space-3);
+  font-weight: var(--weight-semibold);
 }
 
 .postTitle {
-  font-size: 1.1rem;
-  color: var(--text-light);
+  font-size: var(--text-lg);
+  color: var(--text-1);
 }
 
 .postDate {
-  font-size: 0.9rem;
-  color: var(--text-light);
+  font-size: var(--text-sm);
+  color: var(--text-3);
 }
 
 .postDescription {
   margin: 0;
-  color: var(--text-light);
-  line-height: 1.6;
+  color: var(--text-2);
+  line-height: var(--line-height-loose);
 }

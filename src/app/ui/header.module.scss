@@ -1,13 +1,13 @@
 .site-header {
   display: grid;
   justify-items: center;
-  row-gap: 1rem;
-  margin-bottom: 1rem;
+  row-gap: var(--space-4);
+  margin-bottom: var(--space-6);
 }
 
 .site-title {
   text-align: center;
-  margin: 0 auto 8px;
+  margin: 0 auto var(--space-2);
   padding: 0;
 }
 
@@ -15,15 +15,15 @@
   display: block;
   width: 100%;
   height: auto;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 120px;
+  max-width: 120px;
   margin: 0 auto;
   padding: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   border-width: 1px;
   border-style: solid;
-  border-color: var(--border-primary);
-  background-color: var(--color-primary);
+  border-color: var(--border-2);
+  background-color: var(--accent-1);
 }
 
 .site-title a {
@@ -31,29 +31,29 @@
   padding: 0;
   margin: 10px 0;
   font-family: var(--font-oswald);
-  font-size: 2rem;
+  font-size: var(--text-3xl);
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: light-dark(var(--text-light), var(--text-dark));
+  color: var(--text-1);
 
   &:hover {
     span {
-      color: var(--text-light);
-      background-color: var(--color-primary);
+      color: var(--color-neutral-900);
+      background-color: var(--accent-1);
       border: 1px solid transparent;
     }
 
     img {
-      border-color: var(--border-primary);
+      border-color: var(--accent-3);
     }
   }
 
   span {
     display: block;
-    padding: 4px 12px;
-    margin: .5rem 0;
-    border-radius: 4px;
+    padding: 0 var(--space-4);
+    margin: var(--space-2) 0;
+    border-radius: var(--radius-2);
     border: 1px solid transparent;
   }
 
@@ -63,10 +63,10 @@
     line-height: 1;
     margin: 0;
     text-transform: none;
-    font-weight: 400;
-    font-family: "Lato", sans-serif;
-    color: light-dark(var(--text-light), var(--text-dark));
+    font-weight: var(--weight-regular);
+    font-family: var(--font-lato);
+    color: var(--text-2);
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: var(--text-lg);
   }
 }

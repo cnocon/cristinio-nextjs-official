@@ -1,21 +1,94 @@
 :root {
-  --text-light: hsl(0, 0%, 13%);
-  --text-dark: #efefef;
+  --color-neutral-0: hsl(0 0% 100%);
+  --color-neutral-50: hsl(210 20% 96%);
+  --color-neutral-100: hsl(210 18% 94%);
+  --color-neutral-200: hsl(210 16% 88%);
+  --color-neutral-300: hsl(210 12% 78%);
+  --color-neutral-500: hsl(210 9% 48%);
+  --color-neutral-700: hsl(210 10% 26%);
+  --color-neutral-900: hsl(210 16% 12%);
 
-  --border-primary: hsl(168.91deg 56.1% 27.84%);
-  --color-primary: hsl(168.91deg 56.1% 67.84%);
-  --background-light: #fafafa;
-  --background-dark: #242424;
+  --color-accent-300: hsl(168 56% 72%);
+  --color-accent-400: hsl(168 56% 60%);
+  --color-accent-500: hsl(168 56% 48%);
+  --color-accent-700: hsl(168 58% 28%);
+
+  --surface-1: light-dark(var(--color-neutral-50), hsl(210 14% 10%));
+  --surface-2: light-dark(var(--color-neutral-0), hsl(210 14% 14%));
+  --surface-3: light-dark(var(--color-neutral-100), hsl(210 14% 18%));
+  --surface-accent: light-dark(hsl(168 56% 92%), hsl(168 56% 18%));
+
+  --text-1: light-dark(var(--color-neutral-900), hsl(0 0% 96%));
+  --text-2: light-dark(var(--color-neutral-700), hsl(0 0% 78%));
+  --text-3: light-dark(var(--color-neutral-500), hsl(0 0% 62%));
+  --text-inverse: light-dark(hsl(0 0% 98%), hsl(210 16% 12%));
+
+  --border-1: light-dark(var(--color-neutral-200), hsl(210 10% 30%));
+  --border-2: light-dark(var(--color-neutral-300), hsl(210 10% 38%));
+
+  --accent-1: light-dark(var(--color-accent-400), var(--color-accent-300));
+  --accent-2: light-dark(var(--color-accent-500), var(--color-accent-400));
+  --accent-3: light-dark(var(--color-accent-700), var(--color-accent-300));
+
+  --shadow-1: 0 6px 18px rgba(5, 22, 17, 0.12);
+  --shadow-2: 0 14px 32px rgba(5, 22, 17, 0.18);
+
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --radius-3: 12px;
+  --radius-round: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.35;
+  --line-height-base: 1.6;
+  --line-height-loose: 1.8;
+
+  --container-max: 1200px;
+  --content-max: 720px;
+
+  --duration-fast: 150ms;
+  --duration-base: 220ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-pop: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --page-bg: radial-gradient(1200px 520px at 8% -10%, hsla(168, 56%, 62%, 0.16), transparent 60%),
+    radial-gradient(900px 460px at 92% -20%, hsla(210, 18%, 70%, 0.2), transparent 55%),
+    var(--surface-1);
 
   font-family: var(--font-lato), Helvetica, Arial, sans-serif;
-
   font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: var(--line-height-base);
+  font-weight: var(--weight-regular);
 
   color-scheme: light dark;
-  color: light-dark(var(--text-light), var(--text-dark));
-  background-color: light-dark(var(--background-light), var(--background-dark));
+  color: var(--text-1);
+  background-color: var(--surface-1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,7 +98,7 @@
 
 html {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: var(--line-height-base);
 }
 
 html,
@@ -35,11 +108,12 @@ html,
 }
 
 .body {
-  color: var(--background-light);
-  background: var(--background-dark);
+  color: var(--text-1);
+  background: var(--page-bg);
   font-family: var(--font-lato);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 .body * {
@@ -53,9 +127,50 @@ html,
   text-decoration: none;
 }
 
+.body a:hover,
+.body a:focus-visible {
+  color: var(--text-1);
+}
+
+.body ::selection {
+  background: var(--accent-1);
+  color: var(--text-inverse);
+}
+
+.body h1,
+.body h2,
+.body h3,
+.body h4 {
+  font-family: var(--font-oswald);
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--text-1);
+}
+
+.body p {
+  color: var(--text-2);
+  line-height: var(--line-height-loose);
+}
+
 .main {
-  max-width: 1280px;
+  max-width: var(--container-max);
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg: radial-gradient(1200px 520px at 8% -10%, hsla(168, 56%, 36%, 0.2), transparent 60%),
+      radial-gradient(900px 460px at 92% -20%, hsla(210, 18%, 32%, 0.28), transparent 55%),
+      var(--surface-1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .html * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

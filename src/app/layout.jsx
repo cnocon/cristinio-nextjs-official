@@ -22,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <html lang="en">
+    <html lang="en" className="html">
       <body
         className={`body ${lato.variable} ${oswald.variable}`}>
         <Header />
