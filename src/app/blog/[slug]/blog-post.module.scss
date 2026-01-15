@@ -3,12 +3,12 @@
   max-width: var(--content-max);
   width: calc(100% - 48px);
   padding: var(--space-6);
-  box-sizing: border-box;
+  // box-sizing: border-box;
   background: var(--surface-2);
   border-radius: var(--radius-3);
   border: 1px solid var(--border-1);
   box-shadow: var(--shadow-1);
-  display: grid;
+  // display: grid;
   gap: var(--space-6);
 }
 

@@ -60,12 +60,12 @@ export default async function Page({ params }) {
   const { frontmatter, content } = await getPostBySlug(slug);
 
   return (
-    <section className={`${styles.page} ${blogPostStyles.blogPost}`}>
+    <section className={`${styles.page}`}>
       <header className={styles.header}>
         <h2 className={styles["page-title"]}>{frontmatter.title}</h2>
       </header>
 
-      <article>
+      <article className={blogPostStyles.blogPost}>
         <MDXRemote source={content} components={components} />
       </article>
     </section>

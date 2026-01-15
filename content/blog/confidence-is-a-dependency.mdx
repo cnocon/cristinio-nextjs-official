@@ -1,0 +1,186 @@
+---
+title: "Confidence is a Dependency"
+date: "2026-01-15"
+description: "Most engineers think of confidence as a personality trait. In practice, it behaves more like a runtime dependency: when it's present, your code flows; when it's missing, everything gets slower, riskier, and oddly more complex."
+slug: "confidence-is-a-dependency"
+---
+
+I've been a software engineer for close to ten years, and while we all experience imposter syndrome to some degree, I found that mine intensified the further I progressed in my career. It wasn't until I started to understand the role of confidence in engineering that I could understand why that was.
+
+Essentially, the more experience and knowledge I gained, the more my opinions and decisions were broadcast to others for feedback and critique. My opionions were requested on a more diverse set of topics, and I was expected to make decisions with less certainty and more ambiguity.
+
+The day-to-day of my work became less about writing code and more about navigating uncertainty, tradeoffs, and collaboration. As a natural consequence, I felt less confident in my abilities, because there was no clear "right answer" to fall back on.
+
+In this post, I want to explore the concept of confidence as a critical dependency for software engineers. I'll discuss what confidence looks like in code, how it affects collaboration, and practical ways to build genuine confidence that improves both your engineering and your codebase.
+
+## Confidence is a critical dependency for software engineers
+
+Most engineers think of confidence as a personality trait. In practice, it behaves more like a runtime dependency: when it's present, your code flows; when it's missing, everything gets slower, riskier, and oddly more complex.
+
+Confidence affects how you choose solutions, how you communicate uncertainty, how you respond to feedback, and how you handle the emotional reality of shipping imperfect software. **It's not about swagger.** It's about trusting your ability to reason, to learn, and to recover.
+
+> It's not about swagger. It's about trusting your ability to reason, to learn, and to recover.
+
+## What does confidence look like in code?
+
+Let's talk about what confidence actually does to your codebase—and how to build the kind that improves your engineering, not your ego.
+
+When you're confident, you tend to:
+
+- Choose simpler solutions and defend them calmly
+- Make tradeoffs explicit instead of hidden
+- Ship incremental improvements instead of waiting for "perfect"
+- Ask better questions earlier
+- Accept that unknowns are normal and solvable
+
+When confidence is low, the opposite patterns show up:
+
+- Overengineering as a form of self-protection ("If I build a framework, nobody can criticize the details")
+- Avoiding decisions ("Let's keep it flexible" often means "I'm scared to commit")
+- Excessive abstraction to hide uncertainty
+- Delayed feedback (waiting too long to open a PR, request review, or test assumptions)
+- Rigid attachment to initial choices (because changing course feels like failure)
+
+Low confidence isn't laziness—it's often a rational response to environments that punish mistakes. But the behaviors it triggers have a cost: complexity, slower iteration, and fewer learning loops.
+
+> Low confidence isn't laziness—it's often a rational response to environments that punish mistakes. But the behaviors it triggers have a cost: complexity, slower iteration, and fewer learning loops.
+
+Confidence is what lets you keep the code boring
+
+The best codebases aren't impressive. They're legible.
+
+Boring code is a sign of confidence because it means you're not trying to prove anything with your solution. You're optimizing for the next engineer, the next incident, and the next six months—not for the dopamine hit of cleverness.
+
+Confidence says:
+
+- "This is good enough."
+- "We can refactor later if reality demands it."
+- "I don't need a perfect abstraction today."
+- "I can explain this to another human."
+
+Insecure code often looks like one of these:
+- A generic framework where a small function would do
+- A complex pattern imported from a blog post that doesn't match the problem
+- An attempt to pre-solve future requirements nobody has validated
+- Defensive programming everywhere because you don't trust your assumptions
+
+Confidence is what allows you to write code that reads like a sentence.
+
+## Confident engineers don't eliminate uncertainty—they label it
+
+One of the most underrated engineering skills is the ability to say, *"I'm not sure, and here's how I'd find out."*
+
+**Confidence isn't certainty. It's comfort with uncertainty.**
+
+It shows up in concrete behaviors:
+
+- Writing a comment like: `// Assumption: this runs after auth middleware; add guard if that changes`
+- Adding a small test to pin down behavior instead of debating it in Slack
+- Starting with instrumentation ("Let's measure it") instead of opinions ("This will be slow")
+- Proposing an experiment: "I'll ship behind a flag and we'll watch metrics"
+
+Low confidence often tries to hide uncertainty. It sounds like:
+
+- "We probably won't need that."
+- "It should be fine."
+- "This is the standard way."
+- "Everyone does it like this."
+
+Confidence makes uncertainty explicit—and therefore manageable.
+
+> Confidence isn't certainty. It's comfort with uncertainty.
+
+## Confidence and Code Reviews
+
+Code review is a weird social technology: it's both quality control and a vulnerability exercise.
+
+> Code review is a weird social technology: it's both quality control and a vulnerability exercise.
+
+With healthy confidence, you treat review as collaboration:
+
+- You explain intent, constraints, and tradeoffs
+- You welcome critique without interpreting it as personal failure
+- You change your mind easily when someone has a better idea
+- You ask for help on the hard parts
+
+With low confidence, review becomes threatening:
+
+- You over-explain to pre-defend every line
+- You avoid opening PRs until they're "perfect"
+- You interpret comments as judgment
+- You get stuck in "prove I'm right" mode
+
+A confident posture in review looks like:
+
+- "Here's what I optimized for; I'm open to alternatives."
+- "I wasn't sure about this edge case—do you see a cleaner approach?"
+- "Good catch. I'll change it."
+- That's not submissive. That's strong. It's leadership.
+
+## How to build real confidence as an engineer (without faking it)
+
+Confidence doesn't come from telling yourself you're great. It comes from evidence that you can navigate complexity and recover from mistakes.
+
+Here are practical ways to build it.
+
+### 1) Shrink the problem until you can ship something
+
+Instead of "build the system," aim for "make the smallest version that proves the approach."
+
+Shipping creates feedback. Feedback creates learning. Learning creates confidence.
+
+### 2) Write the test you wish existed
+
+Tests are confidence artifacts. They let you change code without fear and help you trust your own work.
+
+Even one well-placed test can flip your emotional state from "fragile" to "steady."
+
+### 3) Keep a "proof of work" log
+
+A private list of things you shipped, fixed, learned, or handled under pressure. Confidence fades faster than reality; logs are receipts.
+
+### 4) Practice naming tradeoffs out loud
+
+In PR descriptions, design docs, or standups:
+
+"I chose X over Y because…"
+
+"The risk is…"
+
+"The follow-up could be…"
+
+That's not weakness—it's clarity. Clarity builds trust, including trust in yourself.
+
+### 5) Separate your identity from your implementation
+
+You are not your code. Your code is a snapshot of decisions under constraints. Critique of the snapshot is not critique of you.
+
+This separation makes you faster, more adaptable, and easier to work with.
+
+## What confident code looks like
+
+Confident code tends to have:
+
+- Small, readable functions
+- Clear naming over clever tricks
+- Minimal abstraction until it's earned
+- Tests in the places that matter
+- Comments that explain *why*, not what
+- Instrumentation for uncertain performance or behavior
+- Simple rollback or feature-flag paths
+- Honest PR descriptions (intent, tradeoffs, known limitations)
+- In other words: confidence makes software maintainable.
+
+## A final reframe
+
+Confidence isn't "I'm sure this is right."
+
+Confidence is:
+
+- "I can reason about this."
+- "I can test it."
+- "I can ask for help."
+- "I can revise it."
+- "I can recover if it breaks."
+
+That's the kind of confidence that doesn't just make you feel better—it makes the codebase better.
