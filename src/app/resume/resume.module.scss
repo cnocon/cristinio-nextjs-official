@@ -1,0 +1,104 @@
+.resumeContent {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.experienceSection {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sectionHeader {
+  h3 {
+    line-height: 1;
+    font-weight: var(--weight-regular);
+    color: var(--text-2);
+    font-size: var(--text-lg);
+    letter-spacing: 1.5px;
+    font-size: var(--text-lg);
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.sectionContent {
+  h4, h5, h6 {
+    margin: 0;
+  }
+  ul:not(.honorsList) {
+    padding-left: var(--space-3);
+    list-style-type: none;
+
+    li {
+      display: flex;
+      align-items: start;
+    }
+
+    li::before {
+      display: inline-block;
+      content: "•";
+      width: var(--space-4);
+      height: var(--space-4);
+      color: var(--color-accent-500);
+      margin-right: var(--space-2);
+    }
+  }
+}
+
+.educationSection {
+  display: grid;
+  gap: var(--space-1)
+}
+
+.skillsSection {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1.5rem;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--surface-3);
+  border-radius: var(--radius-3);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: flex;
+      align-items: start;
+    }
+
+    li::before {
+      display: inline-block;
+      content: "•";
+      width: var(--space-4);
+      height: var(--space-4);
+      color: var(--color-accent-500);
+      margin-right: var(--space-2);
+    }
+  }
+}
+
+.techSkillsSection ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // padding: 0 0 0 var(--space-4);
+}
+
+.softSkillsSection ul {
+  // padding: 0 0 0 var(--space-4);
+
+}
+
+.skillsSection li {
+  margin-bottom: var(--space-2);
+  line-height: 1.25;
+}
