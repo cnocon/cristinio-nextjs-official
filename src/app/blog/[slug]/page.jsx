@@ -64,13 +64,14 @@ export default async function Page({ params }) {
         <h2 className={styles.postTitle}>
           <span>{frontmatter.title}</span>
         </h2>
-        <time dateTime={frontmatter.date} className={styles.postDate}>
+        <div className={styles.postDate}>Published&nbsp;
+        <time dateTime={frontmatter.date}>
           {new Date(frontmatter.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
-        </time>
+        </time></div>
         <div className={styles.tags}>
           {frontmatter.tags.map((tag) => (
             <Tag key={tag.slug} title={tag.title} slug={tag.slug} />
