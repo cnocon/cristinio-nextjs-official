@@ -34,8 +34,51 @@
   --shadow-1: 0 6px 18px rgba(5, 22, 17, 0.12);
   --shadow-2: 0 14px 32px rgba(5, 22, 17, 0.18);
 
-  --rainbow-gradient: linear-gradient(205deg, hsl(58, 100%, 45%) 10%, var(--color-accent-300), var(--color-accent-500), hsl(214, 89%, 70%) 52%, #607FE0, hsl(240, 100%, 80%) 70%, hsl(354, 100%, 80%) 90%);
-  --rainbow-shadow: var(--color-accent-500) 0px 2.75px 2px, hsl(58, 100%, 45%) -2.75px 0px 2px, #607FE0 2.75px 0px 2px, hsl(354, 100%, 80%) 0px -2.75px 2px;
+  --color-purple-bg: hsl(246, 100%, 80%);
+  --color-purple-text: hsl(246, 47%, 36%);
+  --color-purple-pale: hsl(246, 100%, 90%);
+  --color-purple-border: hsl(246, 100%, 70%);
+
+  --color-blue-bg: hsl(210, 90%, 60%);
+  --color-blue-text: hsl(210, 60%, 35%);
+  --color-blue-pale: hsl(210, 100%, 90%);
+  --color-blue-border: hsl(210, 100%, 55%);
+
+  --color-yellow-bg: hsl(51, 100%, 60%);
+  --color-yellow-text: var(--text-1);
+  --color-yellow-pale: hsl(51, 100%, 95%);
+  --color-yellow-border: hsl(51, 100%, 60%);
+
+  --color-orange-bg: hsl(34, 100%, 60%);
+  --color-orange-text: hsl(34, 85%, 30%);
+  --color-orange-pale: hsl(34, 100%, 90%);
+
+  --color-coral-bg: hsl(0, 100%, 90%);
+  --color-coral-text: hsl(6, 60%, 30%);
+  --color-coral-pale: hsl(0, 100%, 95%);
+
+  --color-accent-pale: hsl(168 100% 90%);
+
+  --rainbow-gradient: linear-gradient(90deg,
+    var(--color-accent-500) 0,
+    var(--color-blue-bg) 30%,
+    var(--color-purple-bg) 50%,
+    var(--color-coral-bg) 75%,
+    var(--color-orange-bg) 82%,
+    var(--color-yellow-bg) 97%);
+
+  --rainbow-gradient-light: linear-gradient(90deg,
+    var(--color-accent-pale) 0%,
+    var(--color-blue-pale) 30%,
+    var(--color-purple-pale) 50%,
+    var(--color-coral-pale) 75%,
+    var(--color-orange-pale) 82%,
+    var(--color-yellow-pale) 97%);
+
+  --rainbow-shadow: var(--color-coral-bg) 0px 2.75px 2px,
+    var(--color-yellow-bg) -2.75px 0px 2px,
+    var(--color-accent-500) 2.75px 0px 2px,
+    var(--color-purple-bg) 0px -2.75px 2px;
 
   --radius-1: 4px;
   --radius-2: 8px;
@@ -62,6 +105,7 @@
   --text-3xl: 2.25rem;
   --text-4xl: 3rem;
 
+  --weight-thin: 300;
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
@@ -73,8 +117,10 @@
   --line-height-base: 1.6;
   --line-height-loose: 1.8;
 
-  --container-max: 1280px;
-  --content-max: 960px;
+  --container-max: 14400px;
+  --content-max: 1280px;
+  --content-lg: 960px;
+  --content-md: 760px;
 
   --duration-fast: 150ms;
   --duration-base: 220ms;
