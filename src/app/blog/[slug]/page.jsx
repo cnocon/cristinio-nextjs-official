@@ -62,7 +62,7 @@ export default async function Page({ params }) {
   return (
     <section className={`${styles.page}`}>
       <header className={styles.header}>
-        <h2 className={styles["page-title"]}>{frontmatter.title}</h2>
+        <h2 className={styles["page-title"]}><span>{frontmatter.title}</span></h2>
       </header>
 
       <article className={blogPostStyles.blogPost}>

@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div className={pageStyles.page}>
       <header className={pageStyles.header}>
-        <h2 className={pageStyles['page-title']}>Résumé</h2>
+        <h2 className={pageStyles['page-title']}><span>Résumé</span></h2>
       </header>
 
       <div className={pageStyles.content}>
@@ -19,7 +19,7 @@ export default function Page() {
                   <h4 className={styles.itemTitle}>{item.title}</h4>
                   <h5 className={styles.itemCompany}>{item.company} - {item.location}</h5>
                   <h6 className={styles.itemDate}>
-                    <date>{item.start}</date> - <date>{item.end}</date>
+                    <span className="date">{item.start}</span> - <span className="date">{item.end}</span>
                   </h6>
 
                   <ul className={styles.descriptionList}>
@@ -82,9 +82,9 @@ export default function Page() {
                   ))}
                   <p>{item.school}, {item.location}</p>
                   <p>
-                    <date className={styles.itemDate}>
+                    <span className={styles.itemDate}>
                       {item.start} - {item.end}
-                    </date>
+                    </span>
                   </p>
 
                   {item.honors.length > 0 &&

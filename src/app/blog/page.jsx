@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import Link from "next/link";
 import styles from "../page.module.scss";
 import blogStyles from "./blog.module.scss";
+import { FaRss } from "react-icons/fa";
+
 
 const contentDir = path.join(process.cwd(), "content", "blog");
 
@@ -36,7 +38,7 @@ export default async function Page() {
   return (
     <section className={styles.page}>
       <header className={styles.header}>
-        <h2 className={styles["page-title"]}>Blog</h2>
+        <h2 className={styles["page-title"]}><span>Blog <FaRss /></span></h2>
       </header>
 
       <div className={styles.content}>
