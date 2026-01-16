@@ -36,9 +36,9 @@ export default function NavLinks() {
         <li>
           <Link
             href="/blog"
-            aria-current={pathname === '/blog' ? 'page' : undefined}
+            aria-current={pathname.split('blog').length > 1 ? 'page' : undefined}
             className={clsx(
-              styles['nav-link'], styles['current'],  pathname === '/blog'
+              styles['nav-link'], styles['current'],  pathname.split('blog').length > 1
           )}>
             Blog
           </Link>

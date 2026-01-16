@@ -30,6 +30,13 @@
   padding: var(--space-5) var(--space-6);
   text-decoration: none;
   color: var(--text-1);
+
+  span {
+    background-image: var(--rainbow-gradient);
+    background-size: 100% 2px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
 }
 
 .postMeta {
