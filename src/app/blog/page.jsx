@@ -50,7 +50,11 @@ export default async function Page() {
                   <span className={blogStyles.postTitle}>{post.title}</span>
                   {post.date && (
                     <time className={blogStyles.postDate} dateTime={post.date}>
-                      {post.date}
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
                     </time>
                   )}
                 </div>

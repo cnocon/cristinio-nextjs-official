@@ -1,11 +1,12 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import styles from "../../page.module.scss";
-import blogPostStyles from "./blog-post.module.scss";
+import pageStyles from "../../page.module.scss";
+import styles from "./blog-post.module.scss";
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yLight} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Tag from "../../ui/tag";
 
 // process.cwd() resolves to the repo root when the app runs.
 // Joining content/blog ensures it points to a top-level content/blog directory regardless of OS path separators.
@@ -37,8 +38,8 @@ export async function generateStaticParams() {
 
 
 const components = {
-  h1: (props) => <h1 className={blogPostStyles.title} {...props} />,
-  a: (props) => <a className={blogPostStyles.link} {...props} />,
+  h1: (props) => <h1 className={styles.title} {...props} />,
+  a: (props) => <a className={styles.link} {...props} />,
   code: ({ inline, className, children, ...props }) => {
     const match = /language-(\w+)/.exec(className || "");
     return !inline && match ? (
@@ -51,22 +52,33 @@ const components = {
       </code>
     );
   },
-  // Add more overrides as needed
 };
-
 
 export default async function Page({ params }) {
   const { slug } = await params;
   const { frontmatter, content } = await getPostBySlug(slug);
 
   return (
-    <section className={`${styles.page}`}>
-      <header className={styles.header}>
-        {/* <h2 className={styles["page-title"]}><span>{frontmatter.title}</span></h2> */}
-        <h2><span>{frontmatter.title}</span></h2>
+    <section className={`${pageStyles.page} ${styles.blogPost}`}>
+      <header className={`${pageStyles.header} ${styles.postHeader}`}>
+        <h2 className={styles.postTitle}>
+          <span>{frontmatter.title}</span>
+        </h2>
+        <time dateTime={frontmatter.date} className={styles.postDate}>
+          {new Date(frontmatter.date).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </time>
+        <div className={styles.tags}>
+          {frontmatter.tags.map((tag) => (
+            <Tag key={tag.slug} title={tag.title} slug={tag.slug} />
+          ))}
+        </div>
       </header>
 
-      <article className={blogPostStyles.blogPost}>
+      <article className={styles.blogPost}>
         <MDXRemote source={content} components={components} />
       </article>
     </section>

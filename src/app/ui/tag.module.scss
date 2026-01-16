@@ -1,0 +1,12 @@
+.tag {
+  display: inline-block;
+  border-radius: var(--radius-2);
+  padding: 0 4px;
+  background-color: var(--surface-1);
+  border: 2px solid var(--color-accent-500);
+  font-weight: var(--weight-bold);
+  color: var(--text-1);
+  margin: 0 8px 0 0;
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+}
