@@ -5,6 +5,8 @@
   flex-direction: column;
   gap: 0 var(--space-6);
   padding-top: var(--space-4);
+  max-width: var(--content-lg);
+  margin: 0 auto;
 
   .header {
     margin: 0 auto;
