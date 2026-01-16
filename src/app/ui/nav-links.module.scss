@@ -27,31 +27,27 @@
     font-family: var(--font-lato);
     font-weight: var(--weight-bold);
     color: var(--text-2);
-    border: 1px solid transparent;
     text-decoration: none;
-    transition: color var(--duration-fast) var(--ease-standard),
-      border-color var(--duration-fast) var(--ease-standard),
-      background-color var(--duration-fast) var(--ease-standard);
+    border: 1px solid transparent;
 
     &[aria-current="page"] {
       color: var(--color-neutral-900);
-      border-width: 1px;
-      border-style: solid;
-      border-color: var(--color-accent-700);
-      background-color: var(--accent-1);
+      border: 2px solid var(--color-accent-500);
+      background-color: var(--color-accent-100);
 
       &:hover,
       &:focus,
       &:active,
       &:focus-visible {
         color: var(--color-neutral-900);
-        border: 1px solid var(--color-accent-700);
+        border: 2px solid var(--color-accent-500);
+        background-color: var(--color-accent-100);
       }
     }
 
     &:hover {
       color: var(--text-1);
-      border-color: var(--accent-3);
+      border: 2px solid var(--color-accent-500);
     }
 
     &:focus,
