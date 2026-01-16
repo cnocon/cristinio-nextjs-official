@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import Link from "next/link";
 import styles from "../page.module.scss";
 import blogStyles from "./blog.module.scss";
+import Tag from "../ui/tag";
 import { FaRss } from "react-icons/fa";
 
 
@@ -47,15 +48,25 @@ export default async function Page() {
             <li key={post.slug} className={blogStyles.postItem}>
               <Link className={blogStyles.postLink} href={`/blog/${post.slug}`}>
                 <div className={blogStyles.postMeta}>
-                  <span className={blogStyles.postTitle}>{post.title}</span>
+                  <span className={blogStyles.postTitle}>
+                    {post.title}
+                  </span>
+                  <div className={styles.tags}>
+                    {post.tags.map((tag) => (
+                      <Tag key={tag.slug} title={tag.title} slug={tag.slug} />
+                    ))}
+                  </div>
                   {post.date && (
-                    <time className={blogStyles.postDate} dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </time>
+                    <p className={blogStyles.pubDate}>
+                      Published&nbsp;
+                      <time className={blogStyles.postDate} dateTime={post.date}>
+                        {new Date(post.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </time>
+                    </p>
                   )}
                 </div>
                 {post.description && (

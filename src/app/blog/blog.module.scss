@@ -1,63 +1,68 @@
 .postList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   list-style: none;
   margin: 0 auto;
   padding: 0;
   display: grid;
   gap: var(--space-4);
   max-width: var(--content-max);
-}
 
-.postItem {
-  // border: 1px solid var(--border-1);
-  // border-radius: var(--radius-3);
-  // background: var(--surface-2);
-  // box-shadow: var(--shadow-1);
-  // transition: border-color var(--duration-base) var(--ease-standard),
-  //   transform var(--duration-base) var(--ease-pop),
-  //   box-shadow var(--duration-base) var(--ease-standard);
+  .postItem {
 
-  &:hover {
-    // border-color: var(--accent-3);
-    // transform: translateY(-2px);
-    // box-shadow: var(--shadow-2);
-  }
-}
-
-.postLink {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-5) var(--space-6);
-  text-decoration: none;
-  color: var(--text-1);
-
-  span {
     background-image: var(--rainbow-gradient);
-    background-size: 100% 2px;
-    background-position: center bottom;
+    background-size: 100% 4px;
     background-repeat: no-repeat;
+    background-position: bottom;
+    box-shadow: var(--shadow-1);
+    border: 1px solid var(--border-1);
+    border-radius: var(--radius-2);
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+      box-shadow: var(--shadow-2);
+    }
   }
-}
 
-.postMeta {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-3);
-  font-weight: var(--weight-semibold);
-}
+  .postLink {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5) var(--space-6);
+    text-decoration: none;
+    color: var(--text-1);
+  }
 
-.postTitle {
-  font-size: var(--text-lg);
-  color: var(--text-1);
-}
+  .postMeta {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    font-weight: var(--weight-semibold);
+    flex-direction: column;
+    margin-bottom: var(--space-2);
 
-.postDate {
-  font-size: var(--text-sm);
-  color: var(--text-3);
-}
+    .tag {
+      display: inline-block;
+    }
 
-.postDescription {
-  margin: 0;
-  color: var(--text-2);
-  line-height: var(--line-height-loose);
+    .postTitle {
+      font-size: var(--text-lg);
+      color: var(--text-1);
+    }
+
+    .pubDate,
+    .postDate {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-regular);
+    }
+  }
+
+  .postDescription {
+    margin: 0;
+  }
 }

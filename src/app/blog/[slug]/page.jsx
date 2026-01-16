@@ -2,6 +2,9 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import pageStyles from "../../page.module.scss";
 import styles from "./blog-post.module.scss";
 import fs from "fs/promises";
+import remarkToc from "remark-toc";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -79,8 +82,16 @@ export default async function Page({ params }) {
         </div>
       </header>
 
-      <article className={styles.blogPost}>
-        <MDXRemote source={content} components={components} />
+      <article className={styles.blogPostContent}>
+        <MDXRemote source={content} components={components} options={{
+          mdxOptions: {
+            remarkPlugins: [remarkToc],
+            rehypePlugins: [
+              rehypeSlug,
+              [rehypeAutolinkHeadings, { behavior: "wrap" }],
+            ],
+          },
+        }}/>
       </article>
     </section>
   )

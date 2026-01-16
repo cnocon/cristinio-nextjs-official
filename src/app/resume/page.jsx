@@ -1,12 +1,14 @@
 import pageStyles from "../page.module.scss";
 import data from "../../lib/data/resume";
 import styles from "./resume.module.scss";
+import { FaRegListAlt } from "react-icons/fa";
+
 
 export default function Page() {
   return (
     <div className={pageStyles.page}>
       <header className={pageStyles.header}>
-        <h2 className={pageStyles['page-title']}><span>Résumé</span></h2>
+        <h2 className={pageStyles['page-title']}><span>Résumé <FaRegListAlt /></span></h2>
       </header>
 
       <div className={pageStyles.content}>

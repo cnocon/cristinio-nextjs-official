@@ -2,11 +2,9 @@
   display: inline-block;
   border-radius: var(--radius-2);
   padding: 0 4px;
-  background-color: var(--surface-1);
-  border: 2px solid var(--color-accent-500);
-  font-weight: var(--weight-bold);
-  color: var(--text-1);
-  margin: 0 8px 0 0;
-  text-transform: uppercase;
-  font-size: var(--text-sm);
+  background-color: light-dark(var(--color-neutral-900), var(--color-accent-100));
+  color: var(--text-inverse);
+  border: 1px solid var(--color-accent-500);
+  font-weight: var(--weight-black);
+  margin: 0 0.25rem 0 0;
 }

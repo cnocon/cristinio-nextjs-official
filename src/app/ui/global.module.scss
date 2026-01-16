@@ -36,22 +36,41 @@
 
   --color-purple-bg: hsl(246, 100%, 80%);
   --color-purple-text: hsl(246, 47%, 36%);
+  --color-purple-pale: hsl(246, 100%, 90%);
+
   --color-blue-bg: hsl(210, 90%, 60%);
   --color-blue-text: hsl(210, 60%, 35%);
+  --color-blue-pale: hsl(210, 100%, 90%);
+
   --color-yellow-bg: hsl(51, 100%, 60%);
   --color-yellow-text: var(--text-1);
+  --color-yellow-pale: hsl(51, 100%, 80%);
+
   --color-orange-bg: hsl(34, 100%, 60%);
   --color-orange-text: hsl(34, 85%, 30%);
+  --color-orange-pale: hsl(34, 100%, 90%);
+
   --color-coral-bg: hsl(0, 100%, 90%);
   --color-coral-text: hsl(6, 60%, 30%);
+  --color-coral-pale: hsl(0, 100%, 95%);
+
+  --color-accent-pale: hsl(168 100% 90%);
 
   --rainbow-gradient: linear-gradient(90deg,
-    var(--color-accent-500) 0%,
+    var(--color-accent-500) 0,
     var(--color-blue-bg) 30%,
     var(--color-purple-bg) 50%,
     var(--color-coral-bg) 75%,
     var(--color-orange-bg) 82%,
     var(--color-yellow-bg) 97%);
+
+  --rainbow-gradient-light: linear-gradient(90deg,
+    var(--color-accent-pale) 0%,
+    var(--color-blue-pale) 30%,
+    var(--color-purple-pale) 50%,
+    var(--color-coral-pale) 75%,
+    var(--color-orange-pale) 82%,
+    var(--color-yellow-pale) 97%);
 
   --rainbow-shadow: var(--color-coral-bg) 0px 2.75px 2px,
     var(--color-yellow-bg) -2.75px 0px 2px,
@@ -95,8 +114,9 @@
   --line-height-base: 1.6;
   --line-height-loose: 1.8;
 
-  --container-max: 1280px;
-  --content-max: 960px;
+  --container-max: 14400px;
+  --content-max: 1280px;
+  --content-lg: 960px;
   --content-md: 760px;
 
   --duration-fast: 150ms;
