@@ -10,6 +10,23 @@
 .experienceSection {
   display: grid;
   gap: 1.5rem;
+
+  h4 {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-black);
+    text-transform: uppercase;
+    margin: var(--space-8) 0 0;
+  }
+
+  h5 {
+    font-size: var(--text-lg);
+    font-weight: var(--text-2);
+  }
+
+  h6 {
+    font-size: var(--text-2);
+    font-weight: var(--weight-regular);
+  }
 }
 
 .sectionHeader {
@@ -26,25 +43,68 @@
 }
 
 .sectionContent {
-  h4, h5, h6 {
+  h5, h6 {
     margin: 0;
   }
-  ul:not(.honorsList) {
+
+  .honorsSection h5 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--text-1);
+    text-transform: uppercase;
+    font-weight: var(--weight-black);
+  }
+
+  ul {
     padding-left: var(--space-3);
     list-style-type: none;
+
+    &.honorsList {
+      margin-top: var(--space-1);
+      padding-left: var(--space-2);
+
+      li {
+        display: block;
+        font-weight: var(--weight-bold);
+        font-size: var(--text-sm);
+        list-style-type: none;
+
+        span:last-of-type {
+          display: block;
+          font-weight: var(--weight-regular);
+          margin-bottom: var(--space-4);
+          margin-left: 1.5rem;
+        }
+
+        &::before {
+          display: none;
+        }
+
+        svg {
+          color: var(--color-orange-bg);
+          margin-right: var(--space-1);
+          line-height: inherit;
+          vertical-align: bottom;;
+        }
+      }
+    }
 
     li {
       display: flex;
       align-items: start;
-    }
+      margin-bottom: var(--space-1);
+      line-height: 1.25em;
+      font-size: var(--text-lg);
+      font-weight: var(--weight-regular);
 
-    li::before {
-      display: inline-block;
-      content: "•";
-      width: var(--space-4);
-      height: var(--space-4);
-      color: var(--color-accent-500);
-      margin-right: var(--space-2);
+      &::before {
+        display: inline-block;
+        content: "•";
+        width: var(--space-4);
+        height: var(--space-4);
+        color: var(--color-accent-500);
+        margin-right: var(--space-2);
+      }
     }
   }
 }
@@ -69,38 +129,4 @@
   h3 {
     text-align: center;
   }
-
-  ul {
-    list-style-type: none;
-
-    li {
-      display: flex;
-      align-items: start;
-    }
-
-    li::before {
-      display: inline-block;
-      content: "•";
-      width: var(--space-4);
-      height: var(--space-4);
-      color: var(--color-accent-500);
-      margin-right: var(--space-2);
-    }
-  }
-}
-
-.techSkillsSection ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  // padding: 0 0 0 var(--space-4);
-}
-
-.softSkillsSection ul {
-  // padding: 0 0 0 var(--space-4);
-
-}
-
-.skillsSection li {
-  margin-bottom: var(--space-2);
-  line-height: 1.25;
 }

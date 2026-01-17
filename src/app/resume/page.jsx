@@ -2,26 +2,42 @@ import pageStyles from "../page.module.scss";
 import data from "../../lib/data/resume";
 import styles from "./resume.module.scss";
 import { FaRegListAlt } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
 
+const toDate = (string) => (
+  new Date(string).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short"
+  })
+);
 
 export default function Page() {
   return (
     <div className={pageStyles.page}>
       <header className={pageStyles.header}>
-        <h2 className={pageStyles['page-title']}><span>Résumé <FaRegListAlt /></span></h2>
+        <h2 className={pageStyles['page-title']}>
+          <span>Résumé <FaRegListAlt /></span>
+        </h2>
       </header>
 
       <div className={pageStyles.content}>
         <div className={styles.resumeContent}>
           <section className={styles.experienceSection}>
-            <header className={styles.sectionHeader}><h3>Experience</h3></header>
+            <header className={styles.sectionHeader}>
+              <h3>Experience</h3>
+            </header>
             <div className={styles.sectionContent}>
               {data.resume.experience.map((item, index) => (
                 <div key={index} className={styles.resumeItem}>
                   <h4 className={styles.itemTitle}>{item.title}</h4>
                   <h5 className={styles.itemCompany}>{item.company} - {item.location}</h5>
                   <h6 className={styles.itemDate}>
-                    <time dateTime={item.start}>{item.start}</time> - <time dateTime={item.end}>{item.end}</time>
+                    <time dateTime={item.start}>
+                      {toDate(item.start)}
+                    </time>&nbsp;-&nbsp;
+                    <time dateTime={item.end}>
+                        {toDate(item.end)}
+                      </time>
                   </h6>
 
                   <ul className={styles.descriptionList}>
@@ -39,6 +55,7 @@ export default function Page() {
                   <ul className={styles.honorsList}>
                     {item.honors.map((honor, honorIndex) => (
                       <li key={honorIndex} className={styles.honorsItem}>
+                        <FaTrophy />&nbsp;
                         <span>{honor.name}</span>
                         <span>{honor.detail}</span>
                       </li>
