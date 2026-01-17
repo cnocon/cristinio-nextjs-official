@@ -18,6 +18,9 @@ const oswald = Oswald({
 export const metadata = {
   title: "Cristin O'Connor - Frontend Software Engineer",
   description: "Portfolio and blog of Cristin O'Connor, a frontend software engineer specializing in building responsive and user-friendly web applications.",
+  favicon: "/images/favicon.ico",
+  "apple-icon": "/images/avatar-white.png",
+  icon: "/images/illustration.svg"
 };
 
 export default function RootLayout({children}) {

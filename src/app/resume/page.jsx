@@ -3,18 +3,20 @@ import data from "../../lib/data/resume";
 import styles from "./resume.module.scss";
 import { FaRegListAlt } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
+import { BiBriefcase } from "react-icons/bi";
 
 const toDate = (string) => (
+  string === "Present" ? "Present" : (
   new Date(string).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short"
-  })
+  }))
 );
 
 export default function Page() {
   return (
     <div className={pageStyles.page}>
-      <header className={pageStyles.header}>
+      <header className={styles.resumeHeader}>
         <h2 className={pageStyles['page-title']}>
           <span>Résumé <FaRegListAlt /></span>
         </h2>
@@ -24,7 +26,9 @@ export default function Page() {
         <div className={styles.resumeContent}>
           <section className={styles.experienceSection}>
             <header className={styles.sectionHeader}>
-              <h3>Experience</h3>
+              <h3>
+                <span className={styles.sectionHeaderText}>Experience</span>
+              </h3>
             </header>
             <div className={styles.sectionContent}>
               {data.resume.experience.map((item, index) => (
