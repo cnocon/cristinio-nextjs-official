@@ -13,7 +13,9 @@ export default function Page() {
           </p>
         </blockquote>
       </div>
-      <div className={styles.postListSection}><PostList /></div>
+      <div className={styles.postListSection}>
+        <PostList />
+      </div>
       <div className={styles.connectSection}>
         <header><h2>Connect</h2></header>
         <ul class={styles.connectList}>
