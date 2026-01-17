@@ -1,41 +1,8 @@
-import fs from "fs/promises";
-import path from "path";
-import matter from "gray-matter";
-import Link from "next/link";
 import styles from "../page.module.scss";
-import blogStyles from "./blog.module.scss";
-import Tag from "../ui/tag";
 import { FaRss } from "react-icons/fa";
-
-
-const contentDir = path.join(process.cwd(), "content", "blog");
-
-async function getAllPosts() {
-  const entries = await fs.readdir(contentDir);
-
-  const posts = await Promise.all(
-    entries
-      .filter((filename) => filename.endsWith(".mdx"))
-      .map(async (filename) => {
-        const slug = filename.replace(/\.mdx$/, "");
-        const filePath = path.join(contentDir, filename);
-        const source = await fs.readFile(filePath, "utf8");
-        const { data } = matter(source);
-
-        return {
-          slug,
-          ...data,
-        };
-      })
-  );
-
-  // Optionally sort by date (newest first)
-  return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-}
+import PostList from "../ui/blog/post-list"
 
 export default async function Page() {
-  const posts = await getAllPosts();
-
   return (
     <section className={styles.page}>
       <header className={styles.header}>
@@ -43,39 +10,9 @@ export default async function Page() {
       </header>
 
       <div className={styles.content}>
-        <ul className={blogStyles.postList}>
-          {posts.map((post) => (
-            <li key={post.slug} className={blogStyles.postItem}>
-              <Link className={blogStyles.postLink} href={`/blog/${post.slug}`}>
-                <div className={blogStyles.postMeta}>
-                  <span className={blogStyles.postTitle}>
-                    {post.title}
-                  </span>
-                  <div className={styles.tags}>
-                    {post.tags.map((tag) => (
-                      <Tag key={tag.slug} title={tag.title} slug={tag.slug} />
-                    ))}
-                  </div>
-                  {post.date && (
-                    <p className={blogStyles.pubDate}>
-                      Published&nbsp;
-                      <time className={blogStyles.postDate} dateTime={post.date}>
-                        {new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </time>
-                    </p>
-                  )}
-                </div>
-                {post.description && (
-                  <p className={blogStyles.postDescription}>{post.description}</p>
-                )}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <section className={styles.postListContainer}>
+          <PostList />
+        </section>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-.postList {
+.postListContainer {
   display: grid;
   grid-template-columns: 1fr;
   list-style: none;
@@ -9,66 +9,5 @@
 
   @media screen and (min-width: 760px) {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .postItem {
-    background-image: var(--rainbow-gradient), var(--rainbow-gradient);
-    background-size: 100% 4px;
-    background-repeat: no-repeat;
-    background-position: top, bottom;
-    // box-shadow: var(--shadow-1);
-    border: 2px solid var(--border-2);
-    border-radius: var(--radius-1);
-    transition: background-size 0.3s ease-in-out;
-
-    &:hover,
-    &:focus,
-    &:focus-visible,
-    &:active {
-      box-shadow:  none;
-      border-color: transparent;
-      background-size: 75% 4px;
-    }
-  }
-
-  .postLink {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-    padding: var(--space-5) var(--space-6);
-    text-decoration: none;
-    color: var(--text-1);
-  }
-
-  .postMeta {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    gap: var(--space-2);
-    font-weight: var(--weight-semibold);
-    flex-direction: column;
-    margin-bottom: var(--space-2);
-
-    .tag {
-      display: inline-block;
-    }
-
-    .postTitle {
-      font-size: var(--text-lg);
-      color: var(--text-1);
-      line-height: 1.15em;
-    }
-
-    .pubDate,
-    .postDate {
-      margin: 0;
-      text-transform: uppercase;
-      font-size: var(--text-sm);
-      font-weight: var(--weight-regular);
-    }
-  }
-
-  .postDescription {
-    margin: 0;
   }
 }
