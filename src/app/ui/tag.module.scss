@@ -1,5 +1,6 @@
 .tag {
   display: inline-block;
+  font-size: var(--text-xs);
   padding: 0 var(--space-1);
   margin: var(--space-1) var(--space-1) 0;
   border-radius: var(--radius-1);
@@ -8,7 +9,7 @@
   font-weight: var(--weight-semibold);
 
   @media screen and (min-width: 760px) {
-    margin: var(--space-1) var(--space-2);
-    padding: 0 var(--space-2);
+    margin: var(--space-1);
+    padding: 0 var(--space-1);
   }
 }

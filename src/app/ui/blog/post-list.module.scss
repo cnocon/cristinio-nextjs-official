@@ -29,6 +29,10 @@
       background-size: 100% 12px;
       border-radius: var(--radius-2);
     }
+
+    .tags {
+      white-space: nowrap;
+    }
   }
 
   .postLink {

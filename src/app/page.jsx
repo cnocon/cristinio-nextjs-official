@@ -1,5 +1,6 @@
 import pageStyles from "./page.module.scss";
 import styles from "./homepage.module.scss";
+import PostList from "./ui/blog/post-list";
 
 export default function Page() {
   return (
@@ -12,7 +13,7 @@ export default function Page() {
           </p>
         </blockquote>
       </div>
-
+      <div className={styles.postListSection}><PostList /></div>
       <div className={styles.connectSection}>
         <header><h2>Connect</h2></header>
         <ul class={styles.connectList}>
