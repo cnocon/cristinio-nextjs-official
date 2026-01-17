@@ -5,13 +5,17 @@
 .site-nav ul {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap: var(--space-7);
+  column-gap: var(--space-1);
   margin: var(--space-5) auto;
   padding: 0;
   list-style: none;
   text-align: center;
   margin: 0;
   padding: 0;
+
+  @media screen and (min-width: 760px) {
+    column-gap: var(--space-7);
+  }
 
   li {
     display: inline-block;
