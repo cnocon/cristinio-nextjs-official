@@ -25,9 +25,9 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <html lang="en" className="html">
+    <html lang="en" className={styles.html}>
       <body
-        className={`body ${lato.variable} ${oswald.variable}`}>
+        className={`${styles.body} ${lato.variable} ${oswald.variable}`}>
         <Header />
         <main className={styles["main"]}>{children}</main>
         <Footer />

@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
-import Card from "./card";
+import PostCard from "./postCard";
 import styles from "./post-list.module.scss";
 
 const contentDir = path.join(process.cwd(), "content", "blog");
@@ -36,7 +36,7 @@ export default async function PostList() {
     <ul className={styles.postList}>
       {posts.map((post) => (
         <li key={post.slug} className={styles.postItem}>
-          <Card post={post} />
+          <PostCard post={post} />
         </li>
       ))}
     </ul>

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Tag from "../tag";
-import styles from "./card.module.scss"
+import styles from "./post-card.module.scss"
 
-const Card = ({ post }) => (
+const PostCard = ({ post }) => (
   <Link className={styles.postLink} href={`/blog/${post.slug}`}>
     <div className={styles.postMeta}>
       <span className={styles.postTitle}>
@@ -32,4 +32,4 @@ const Card = ({ post }) => (
   </Link>
 )
 
-export default Card;
+export default PostCard;

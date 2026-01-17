@@ -13,13 +13,8 @@
   }
 
   .postItem {
-    background-image: var(--rainbow-gradient);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color: var(--surface-1-inverse);
-    transition: background-size 0.3s ease-in-out;
-    background-size: 100% 6px;
-    border-radius: var(--radius-2);
+    display: flex;
+
 
     &:hover,
     &:focus,

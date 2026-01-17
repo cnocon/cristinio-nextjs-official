@@ -2,10 +2,10 @@
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
-  padding: var(--space-4);
+  padding: 0;
   gap: 2rem;
-  max-width: var(--content-lg);
   margin: 0 auto;
+  max-width: var(--content-lg);
 }
 
 .sectionHeader h3 {

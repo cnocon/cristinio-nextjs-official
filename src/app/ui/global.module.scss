@@ -17,6 +17,7 @@
   --surface-1: light-dark(var(--color-neutral-50), hsl(210 14% 10%));
   --surface-1-inverse: light-dark(hsl(210 14% 18%), var(--color-neutral-50));
   --surface-2: light-dark(var(--color-neutral-0), hsl(210 14% 14%));
+  --surface-2-inverse: light-dark(hsl(210 16% 20%), var(--color-neutral-0));
   --surface-3: light-dark(var(--color-neutral-100), hsl(210 14% 18%));
   --surface-accent: light-dark(hsl(168 56% 92%), hsl(168 56% 18%));
 
@@ -39,27 +40,33 @@
   --color-purple-bg: hsl(246, 100%, 80%);
   --color-purple-text: hsl(246, 47%, 36%);
   --color-purple-pale: hsl(246, 100%, 90%);
+  --color-purple-light: hsl(246, 100%, 95%);
   --color-purple-border: hsl(246, 100%, 70%);
 
   --color-blue-bg: hsl(210, 90%, 60%);
   --color-blue-text: hsl(210, 60%, 35%);
   --color-blue-pale: hsl(210, 100%, 90%);
+  --color-blue-light: hsl(210, 100%, 92%);
   --color-blue-border: hsl(210, 100%, 55%);
 
   --color-yellow-bg: hsl(51, 100%, 60%);
   --color-yellow-text: var(--text-1);
   --color-yellow-pale: hsl(51, 100%, 95%);
+  --color-yellow-light: hsl(51, 100%, 98%);
   --color-yellow-border: hsl(51, 100%, 60%);
 
   --color-orange-bg: hsl(34, 100%, 60%);
   --color-orange-text: hsl(34, 85%, 30%);
   --color-orange-pale: hsl(34, 100%, 90%);
+  --color-orange-light: hsl(34, 100%, 95%);
 
   --color-coral-bg: hsl(0, 100%, 90%);
   --color-coral-text: hsl(6, 60%, 30%);
-  --color-coral-pale: hsl(0, 100%, 95%);
+  --color-coral-pale: hsl(0, 100%, 92%);
+  --color-coral-light: hsl(0, 100%, 96%);
 
   --color-accent-pale: hsl(168 100% 90%);
+  --color-accent-light: hsl(168 100% 97%);
 
   --rainbow-gradient: linear-gradient(90deg,
     var(--color-accent-500) 0,
@@ -73,7 +80,7 @@
     var(--color-accent-500) 0,
     var(--color-blue-bg) 30%,
     var(--color-purple-bg) 50%,
-    var(--color-coral-bg) 75%,
+    var(--color-coral-bg) 75%,s
     var(--color-orange-bg) 82%,
     var(--color-yellow-bg) 97%);
 
@@ -84,6 +91,14 @@
     var(--color-coral-pale) 75%,
     var(--color-orange-pale) 82%,
     var(--color-yellow-pale) 97%);
+
+    --rainbow-gradient-light: linear-gradient(90deg,
+    var(--color-accent-light) 0%,
+    var(--color-blue-light) 30%,
+    var(--color-purple-light) 50%,
+    var(--color-coral-light) 75%,
+    var(--color-orange-light) 82%,
+    var(--color-yellow-light) 97%);
 
   --rainbow-shadow: var(--color-coral-bg) 0px 2.75px 2px,
     var(--color-yellow-bg) -2.75px 0px 2px,
@@ -156,12 +171,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
+.html {
   font-size: 16px;
   line-height: var(--line-height-base);
 }
 
-html,
+.html,
 .body {
   max-width: 100%;
   overflow-x: hidden;
@@ -176,20 +191,22 @@ html,
   min-height: 100vh;
 }
 
-.body * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+// .body * {
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+// }
 
-.body a {
+.body a,
+.body a:link {
   color: inherit;
-  text-decoration: none;
-}
 
-.body a:hover,
-.body a:focus-visible {
-  color: var(--text-1);
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    text-decoration: none;
+  }
 }
 
 .body ::selection {
@@ -197,40 +214,40 @@ html,
   color: var(--text-inverse);
 }
 
-.body h1,
-.body h2,
-.body h3,
-.body h4 {
-  font-family: var(--font-oswald);
-  font-weight: var(--weight-semibold);
-  line-height: var(--line-height-tight);
-  color: var(--text-1);
-}
+.body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text-1);
+  }
 
-.body p {
-  color: var(--text-2);
-  line-height: var(--line-height-loose);
-}
+  p {
+    margin: 0 0 var(--space-4) 0;
+  }
 
-.main {
-  max-width: var(--content-max);
-  width: 100%;
-  margin: 0 auto;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page-bg: radial-gradient(1200px 520px at 8% -10%, hsla(168, 56%, 36%, 0.2), transparent 60%),
-      radial-gradient(900px 460px at 92% -20%, hsla(210, 18%, 32%, 0.28), transparent 55%),
-      var(--surface-1);
+  .main {
+    max-width: var(--content-max);
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .html * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page-bg: radial-gradient(1200px 520px at 8% -10%, hsla(168, 56%, 36%, 0.2), transparent 60%),
+        radial-gradient(900px 460px at 92% -20%, hsla(210, 18%, 32%, 0.28), transparent 55%),
+        var(--surface-1);
+    }
   }
-}
+
+  @media (prefers-reduced-motion: reduce) {
+    :root * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }

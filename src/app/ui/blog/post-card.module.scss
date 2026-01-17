@@ -4,10 +4,26 @@
   gap: var(--space-2);
   padding: var(--space-6);
   text-decoration: none;
-  color: var(--text-inverse);
+  color: inherit;
+  background-image: var(--rainbow-gradient);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: var(--surface-2);
+  background-size: 100% 6px;
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-2);
+  transition: background-color color 0.3s ease-in-out;
 
   @media screen and (min-width: 760px) {
     padding: var(--space-8);
+  }
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    background-color: var(--surface-2-inverse);
+    color: var(--text-inverse);
   }
 
   .tags {
