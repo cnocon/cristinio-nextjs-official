@@ -24,7 +24,6 @@
   padding: var(--space-2) var(--space-2) 0 0;
   font-size: var(--text-2xl);
   font-weight: var(--weight-black);
-  // text-transform: uppercase;
 }
 
 .experienceSection {
@@ -35,7 +34,6 @@
     font-size: var(--text-xl);
     font-weight: var(--weight-semibold);
     margin: var(--space-2) 0 0;
-    // text-transform: uppercase;
   }
 
   h5 {
@@ -116,19 +114,36 @@
 }
 
 .skillsSection {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-2);
   padding: var(--space-4);
   background-color: var(--surface-3);
   border-radius: var(--radius-3);
 
-  @media screen and (min-width:  var(--content-md)) {
-    grid-template-columns: 3fr 2fr;
+  .techSkillsSection {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--space-2) var(--space-4);
+    }
+  }
+
+  .softSkillsSection {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2) var(--space-4);
+    }
   }
 
   h3 {
-    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--font-regular);
 
     @media screen and (min-width:  var(--content-md)) {
       text-align: left;
