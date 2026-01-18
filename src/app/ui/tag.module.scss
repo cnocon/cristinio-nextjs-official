@@ -5,7 +5,7 @@
   margin: var(--space-1) var(--space-1) 0;
   border-radius: var(--radius-1);
   background-color: var(--surface-2-inverse);
-  color: var(--text-inverse);
+  color: light-dark(var(--text-inverse), var(--color-neutral-900));
   font-weight: var(--weight-bold);
 
   @media screen and (min-width: 760px) {

@@ -31,9 +31,11 @@
   gap: var(--space-1);
 
   h4 {
-    font-size: var(--text-xl);
-    font-weight: var(--weight-semibold);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-black);
     margin: var(--space-2) 0 0;
+    font-family: var(--font-oswald);
+    text-transform: uppercase;
   }
 
   h5 {
