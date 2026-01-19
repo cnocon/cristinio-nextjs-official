@@ -4,7 +4,6 @@
   gap: var(--space-2);
   padding: var(--space-6);
   text-decoration: none;
-  color: inherit;
   background-image: var(--rainbow-gradient);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -23,7 +22,11 @@
   &:focus,
   &:focus-visible {
     background-color: var(--surface-2-inverse);
-    color: var(--text-inverse);
+    color: light-dark(var(--color-neutral-50), var(--color-neutral-900));
+
+    .tag {
+      background-color: light-dark(var(--color-neutral-50), var(--color-accent-700));
+    }
   }
 
   .tags {

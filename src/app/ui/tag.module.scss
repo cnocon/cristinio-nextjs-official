@@ -4,8 +4,9 @@
   padding: 0 var(--space-1);
   margin: var(--space-1) var(--space-1) 0;
   border-radius: var(--radius-1);
-  background-color: var(--surface-2-inverse);
-  color: light-dark(var(--text-inverse), var(--color-neutral-900));
+  color: var(--color-neutral-900);;
+  background-color: var(--color-accent-100);
+  border: 2px solid var(--color-accent-400);
   font-weight: var(--weight-bold);
 
   @media screen and (min-width: 760px) {
