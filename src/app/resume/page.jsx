@@ -3,7 +3,6 @@ import data from "../../lib/data/resume";
 import styles from "./resume.module.scss";
 import { FaRegListAlt } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
-import { BiBriefcase } from "react-icons/bi";
 
 const toDate = (string) => (
   string === "Present" ? "Present" : (
@@ -73,7 +72,7 @@ export default function Page() {
 
           <section className={styles.skillsSection}>
             <div className={styles.techSkillsSection}>
-              <header className={styles.sectionHeader}><h3>Technical Skills</h3></header>
+              <header className={styles.sectionHeader}><h3><span className={styles.sectionHeaderText}>Technical Skills</span></h3></header>
               <div className={styles.sectionContent}>
                 <ul className={styles.skillsList}>
                   {data.resume.skills.technical.map((skill, index) => (
@@ -84,7 +83,11 @@ export default function Page() {
             </div>
 
             <div className={styles.softSkillsSection}>
-              <header className={styles.sectionHeader}><h3>Soft Skills</h3></header>
+              <header className={styles.sectionHeader}>
+                <h3>
+                  <span className={styles.sectionHeaderText}>Soft Skills</span>
+                </h3>
+              </header>
               <div className={styles.sectionContent}>
                 <ul className={styles.skillsList}>
                   {data.resume.skills.soft.map((skill, index) => (
@@ -96,7 +99,9 @@ export default function Page() {
           </section>
 
           <section className={styles.educationSection}>
-            <header className={styles.sectionHeader}><h3>Education</h3></header>
+            <header className={styles.sectionHeader}>
+              <h3><span className={styles.sectionHeaderText}>Education</span></h3>
+            </header>
             <div className={styles.sectionContent}>
               {data.resume.education.map((item, index) => (
                 <div key={index} className={styles.resumeItem}>
@@ -106,7 +111,7 @@ export default function Page() {
                   <p>{item.school}, {item.location}</p>
                   <p>
                     <span className={styles.itemDate}>
-                      {item.start} - {item.end}
+                      {toDate(item.start)} - {toDate(item.end)}
                     </span>
                   </p>
 

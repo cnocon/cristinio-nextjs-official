@@ -158,3 +158,50 @@
     }
   }
 }
+
+.educationSection {
+  h4 {
+    font-size: var(--text-xl);
+    margin: 0;
+  }
+
+  p:first-of-type {
+    font-weight: var(--weight-thin);
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  p:last-of-type {
+    margin: 0;
+    font-weight: var(--weight-thin);
+  }
+
+  .sectionContent ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &::before {
+        display: inline-block;
+        width: 20px;
+      }
+
+      span {
+        display: inline-block;
+        width: calc(100% - 30px);
+        font-weight: var(--weight-bold);
+
+        &:last-of-type {
+          display: block;
+          width: 100%;
+          padding-left: 30px;
+          font-weight: var(--weight-thin);
+        }
+      }
+    }
+  }
+}

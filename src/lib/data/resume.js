@@ -58,15 +58,15 @@ const data = {
           },
         ]
       },
-      {
-        title: "Dev Bootcamp (Chicago)",
-        school: "Dev Bootcamp",
-        schoolUrl: null,
-        location: "Chicago, IL",
-        start: "01/01/2014",
-        end: "04/01/2014",
-        honors: []
-      },
+      // {
+      //   title: "Dev Bootcamp (Chicago)",
+      //   school: "Dev Bootcamp",
+      //   schoolUrl: null,
+      //   location: "Chicago, IL",
+      //   start: "01/01/2014",
+      //   end: "04/01/2014",
+      //   honors: []
+      // },
     ],
     skills: {
       technical: [
