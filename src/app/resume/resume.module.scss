@@ -52,11 +52,13 @@
 }
 
 .sectionContent {
-  .honorsSection h5 {
-    margin: 0;
-    padding: 0;
-    font-size: var(--text-lg);
-    font-weight: var(--weight-semibold);
+  .honorsSection {
+    h5 {
+      margin: 0;
+      padding: 0;
+      font-size: var(--text-lg);
+      font-weight: var(--weight-semibold);
+    }
   }
 
   ul {
@@ -73,13 +75,6 @@
         font-size: var(--text-lg);
         list-style-type: none;
 
-        span:last-of-type {
-          display: block;
-          font-weight: var(--weight-regular);
-          margin-bottom: var(--space-4);
-          margin-left: 1.5rem;
-        }
-
         &::before {
           display: none;
         }
@@ -88,6 +83,17 @@
           color: var(--color-orange-bg);
           margin-right: var(--space-1);
           vertical-align: text-bottom;
+        }
+
+        span {
+          font-weight: var(--weight-black);
+        }
+
+        span:last-of-type {
+          display: block;
+          padding-left: 27px;
+          width: 100%;
+          font-weight: var(--weight-regular);
         }
       }
     }
