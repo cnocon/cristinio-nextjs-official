@@ -1,10 +1,43 @@
-.welcome {
+.homePage {
+  header {
+    position: relative;
 
-  .blockquote {}
-}
+    h2 {}
+  }
+  .bannerBlockquote {
+    max-width: 760px;
+    width: 100%;
+    padding: var(--space-6);
+    margin: 2rem auto 3rem;
+    display: grid;
 
-.connectSection {
-  display: grid;
+    p {
+      font-size: var(--text-3xl);
+      line-height: 1.75em;
+      font-weight: var(--weight-regular);
+      text-align: center;
+
+      svg {
+        display: inline-block;
+        vertical-align: text-top;
+        font-size: var(--text-xl);
+
+        &:first-of-type {
+          padding-right: var(--space-2);
+        }
+
+        &:last-of-type {
+          padding-left: var(--space-2);
+        }
+      }
+    }
+
+    p + p {
+      font-size: var(--text-xl);
+      text-align: center;
+      font-weight: var(--weight-regular);
+    }
+  }
 }
 
 .postListSection {

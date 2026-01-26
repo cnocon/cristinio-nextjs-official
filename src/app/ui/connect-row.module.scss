@@ -1,0 +1,49 @@
+.connectRow {
+  margin: var(--space-8) 0;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6) var(--space-3);
+    padding: 0;
+    max-width: var(--content-lg);
+    margin: 0 auto;
+    list-style: none;
+
+    @media all and (min-width: 760px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: var(--space-6);
+      padding: var(--space-6) 0;
+    }
+  }
+
+  li {
+    a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      font-weight: var(--weight-regular);
+      font-size: var(--text-lg);
+
+      &:hover,
+      &:active,
+      &:focus,
+      &:focus-visible {
+        color: var(--color-accent-500);
+      }
+
+      svg {
+        display: block;
+        height: var(--space-8);
+        width: var(--space-8);
+        margin: var(--space-2) auto;
+        padding: var(--space-4);
+        background-color: transparent;
+        box-shadow: var(--rainbow-shadow);
+        border-radius: 50%;
+      }
+    }
+
+  }
+}
