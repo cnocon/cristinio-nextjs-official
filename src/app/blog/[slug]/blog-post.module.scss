@@ -84,10 +84,7 @@
         font-weight: inherit;
         text-decoration: none;
 
-        &:hover,
-        &:active,
-        &:focus,
-        &:focus-visible {
+        &:hover {
           border-bottom: 0;
         }
       }
@@ -118,10 +115,7 @@
     border-bottom-style: solid;
     transition: border-bottom-width 0.15s ease-in-out;
 
-    &:hover,
-    &:focus-visible,
-    &:active,
-    &:focus {
+    &:hover {
       border-bottom-width: 0;
     }
   }
@@ -140,10 +134,7 @@
     .link {
       border-bottom-width: 0;
 
-      &:hover,
-      &:active,
-      &:focus,
-      &:focus-visible {
+      &:hover {
         border-bottom-width: 1px;
       }
     }

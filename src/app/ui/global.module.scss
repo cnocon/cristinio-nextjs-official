@@ -201,10 +201,7 @@
 .body a:link {
   color: inherit;
 
-  &:hover,
-  &:active,
-  &:focus,
-  &:focus-visible {
+  &:hover {
     text-decoration: none;
   }
 }

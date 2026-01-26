@@ -39,10 +39,7 @@
       border: 2px solid var(--color-accent-500);
       background-color: var(--color-accent-100);
 
-      &:hover,
-      &:focus,
-      &:active,
-      &:focus-visible {
+      &:hover {
         color: var(--color-neutral-900);
         border: 2px solid var(--color-accent-500);
         background-color: var(--color-accent-100);
@@ -52,13 +49,6 @@
     &:hover {
       color: var(--text-1);
       border: 2px solid var(--color-accent-500);
-    }
-
-    &:focus,
-    &:active,
-    &:focus-visible {
-      outline: none;
-      border-color: transparent;
     }
   }
 }

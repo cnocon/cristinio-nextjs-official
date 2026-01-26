@@ -26,10 +26,7 @@
       font-weight: var(--weight-regular);
       font-size: var(--text-lg);
 
-      &:hover,
-      &:active,
-      &:focus,
-      &:focus-visible {
+      &:hover {
         color: var(--color-accent-500);
       }
 
