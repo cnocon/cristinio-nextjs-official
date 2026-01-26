@@ -17,10 +17,7 @@
     padding: var(--space-8);
   }
 
-  &:hover,
-  &:active,
-  &:focus,
-  &:focus-visible {
+  &:hover {
     background-color: var(--surface-2-inverse);
     color: light-dark(var(--color-neutral-50), var(--color-neutral-900));
 

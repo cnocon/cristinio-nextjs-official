@@ -69,13 +69,11 @@
     background-position: bottom, top;
     background-repeat: no-repeat;
     background-size: 100% 2px;
-    margin: var(--space-8) 0;
     padding: var(--space-2) 0;
     font-size: var(--text-lg);
     font-weight: var(--weight-thin);
 
     @media screen and (min-width: 760px) {
-      margin: var(--space-8) var(--space-4);
       font-size: var(--text-xl);
       line-height: 1.25em;
     }

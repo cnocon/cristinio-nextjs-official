@@ -1,5 +1,4 @@
 .connectRow {
-  margin: var(--space-8) 0;
 
   ul {
     display: grid;
@@ -13,7 +12,7 @@
     @media all and (min-width: 760px) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       gap: var(--space-6);
-      padding: var(--space-6) 0;
+      padding: 0;
     }
   }
 

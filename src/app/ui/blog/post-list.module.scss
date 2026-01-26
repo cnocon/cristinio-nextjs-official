@@ -15,10 +15,7 @@
   .postItem {
     display: flex;
 
-    &:hover,
-    &:focus,
-    &:focus-visible,
-    &:active {
+    &:hover {
       background-image: var(--rainbow-gradient-alt);
       background-size: 100% 12px;
       border-radius: var(--radius-2);

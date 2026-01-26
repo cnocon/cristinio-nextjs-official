@@ -1,0 +1,58 @@
+---
+title: "Pseudo Classes for Links"
+date: "2026-01-30"
+description: "I discuss the most relevant pseudo classes for links in modern web development"
+slug: "pseudo-classes-for-links"
+tags: [{
+  title: "Draft",
+  slug: "draft"
+},
+{
+  title: "HTML5",
+  slug: "html5"
+},
+{
+  title: "CSS",
+  slug: "css"
+}]
+---
+
+## Table of Contents
+
+The common CSS pseudo-classes used for styling links define their appearance based on the link's state (unvisited, visited, hovered, clicked, or focused). In this article we'll dive deeper into what each of those pseudo classes can accomplish.
+
+## Main Pseudo-Classes for Links
+
+These pseudo-classes are used with the anchor `<a>` element to style links in different states:
+
+### `a:link`
+
+`a:link`: Selects and styles unvisited links (links the user hasn't clicked yet).
+
+
+### `a:visited`
+
+`a:visited`: Selects and styles links that the user has already visited. (Note: For privacy reasons, browsers limit the CSS properties that can be changed with
+
+### `:visited`
+
+`:visited`, mostly to color-related properties).
+
+### `a:hover`, `a:active`, and `a:focus`
+
+`a:hover`: Selects and styles a link when the user's mouse pointer is over it.
+
+`a:active`: Selects and styles a link at the moment it is being clicked (between the mousedown and mouseup events).
+
+`a:focus`: Selects and styles a link when it has the keyboard focus (typically when a user tabs to it). **==This is crucial for accessibility==**.
+
+<blockquote><p>For better accessibility, it is recommended to ==apply the same styles to both `:hover` and `:focus` states==, or, alternatively, to place `:focus` before `:hover` (LVFHA: "Last Vintage Fur Hat Available") to ensure the hover effect applies to links with keyboard focus.</p></blockquote>
+
+## Order of Pseudo-Classes (LVHA Rule)
+
+The order in which you define these pseudo-classes in your CSS stylesheet matters due to CSS specificity rules. To ensure all states work correctly, they should be declared in the following order, often remembered by the mnemonic LVHA ("Last Vintage Hat Available"):
+
+1.`:link`
+1.`:visited`
+1.`:hover` (or `:focus`, see below)
+1.`:active`

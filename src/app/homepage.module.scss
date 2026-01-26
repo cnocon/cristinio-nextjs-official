@@ -1,14 +1,11 @@
 .homePage {
   header {
     position: relative;
-
-    h2 {}
   }
+
   .bannerBlockquote {
     max-width: 760px;
-    width: 100%;
-    padding: var(--space-6);
-    margin: 2rem auto 3rem;
+    margin: 0 auto;
     display: grid;
 
     p {
@@ -39,7 +36,19 @@
     }
   }
 }
+.welcomeSection,
+.connectSection,
+.postListSection{
+  margin: var(--space-2) 0;
+  padding: var(--space-2);
 
-.postListSection {
-  display: block;
+  @media all and (min-width: 760px) {
+    margin: var(--space-6) 0 var(--space-8);
+    padding: 0 var(--space-6);
+  }
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;;
+  }
 }
