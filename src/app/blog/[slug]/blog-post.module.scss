@@ -99,7 +99,7 @@
   }
 
   pre {
-    overflow-x: scroll;
+    overflow-x: auto;
     max-width: 100%;
     display: block;
 
@@ -148,6 +148,7 @@
     text-align: left;
     font-weight: var(--weight-regular);
   }
+
   img {
     margin: var(--space-4) auto var(--space-2);
     display: block;

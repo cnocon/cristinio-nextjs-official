@@ -30,13 +30,14 @@ Therefore, instead of checking out out each branch one by one and looking at the
 
 It is possible to list your local git branches ordered by most recent commit date, while showing some extra information, like the abbreviated commit sha and commit message.
 
-```shell
+```bash
 git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);%(color:green)%(committerdate:relative)%(color:reset);%(committerdate:format:'%m/%d/%Y\ %H:%M');%(color:cyan)%(authorname)%(color:reset);%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%(contents:subject)%(color:reset)" | column -t -s ";"
 ```
 
 Your results should look something like this:
 
-![Screenshot of branches listed in order by date](/images/git-post-image.png)
+<img alt="Screenshot of branches listed in order by date" src="/images/git-commit=alias-post-image.png" width={760} height={`auto`} />
+
 
 If you're human, you'll never remember that whole command. I personally have it saved as an alias called gbl (like "git branch list") that you can create as well by following along below.
 
@@ -46,7 +47,7 @@ For this example, let's use ~/.bash_profile.
 
 On a new line in your profile file, lets create an alias called gbl for that command that lists out our branches by updated date:
 
-```shell
+```bash
 alias gbl='git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);%(color:green)%(committerdate:relative)%(color:reset);%(committerdate:format:'%m/%d/%Y\ %H:%M');%(color:cyan)%(authorname)%(color:reset);%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%(contents:subject)%(color:reset)" | column -t -s ";"'
 ```
 
@@ -54,7 +55,7 @@ Great! Save the file and head back to your terminal app.
 
 Now, we have to tell our terminal application to reload and get the latest changes to the bash profile file. If yours was located at ~/.bash_profile, you would run the following command in your terminal:
 
-```shell
+```bash
 source ~/.bash_profile
 ```
 If you try running `gbl` in your command line, you should see your branches listed out, sorted by the date of the last commit to the branch!
