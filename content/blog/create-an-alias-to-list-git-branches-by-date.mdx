@@ -1,0 +1,41 @@
+---
+title: "Create an Alias to List Git Branches by Date"
+date: "2025-06-12"
+description: "It is possible to list your local git branches ordered by most recent commit date, while showing some extra information, like the abbreviated commit sha and commit message. But if you're human, you'll never remember the whole command to do so. In this post you'll learn how to permanently save an easy-to-remember alias to run that lengthy command with ease..."
+slug: "create-an-alias-to-list-git-branches-by-date"
+tags: [{
+  title: "Draft",
+  slug: "draft"
+},
+{
+  title: "HTML5",
+  slug: "html5"
+},
+{
+  title: "CSS",
+  slug: "css"
+}]
+---
+
+## Table of Contents
+
+Sometimes I wouldn't realize how many random one-off branches I had saved locally until one day, after running the generic git branch command, that I had no idea which branch was actually the one I needed. I wanted to be able to quickly see if a branch:
+
+1. Contained the right work
+2. Was the most recent one (I was very sloppy about naming things similarly over a long period of time. Don't be like me.)
+
+Therefore, instead of checking out out each branch one by one and looking at the commit history, and trying to read the not-so-nicely-formatted dates, I found what is now one of my favorite commands ever.
+
+## The Command
+
+It is possible to list your local git branches ordered by most recent commit date, while showing some extra information, like the abbreviated commit sha and commit message.
+
+N.B. The following instructions are for Mac OSX command line users.
+
+```bash
+git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);%(color:green)%(committerdate:relative)%(color:reset);%(committerdate:format:'%m/%d/%Y\ %H:%M');%(color:cyan)%(authorname)%(color:reset);%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%(contents:subject)%(color:reset)" | column -t -s ";"
+```
+
+```jsx
+console.log(`test git for-each-ref --sort=-committerdate refs/heads/ --color --format="%(HEAD)%(color:bold)%(refname:short)%(color:reset);%(color:green)%(committerdate:relative)%(color:reset);%(committerdate:format:'%m/%d/%Y\ %H:%M');%(color:cyan)%(authorname)%(color:reset);%(color:yellow)%(objectname:short)%(color:reset) %(color:italic)%(contents:subject)%(color:reset)" | column -t -s ";"')`)
+```
