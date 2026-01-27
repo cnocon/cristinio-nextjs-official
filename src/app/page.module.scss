@@ -70,12 +70,14 @@
     background-repeat: no-repeat;
     background-size: 100% 2px;
     padding: var(--space-2) 0;
+    margin: var(--space-4) 0;
     font-size: var(--text-lg);
     font-weight: var(--weight-thin);
 
     @media screen and (min-width: 760px) {
+      padding: var(--space-4) 0;
+      margin: var(--space-8) 0;
       font-size: var(--text-xl);
-      line-height: 1.25em;
     }
 
     p {

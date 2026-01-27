@@ -4,8 +4,8 @@
   font-family: var(--font-lato);
   flex-direction: column;
   gap: 0 var(--space-6);
+  max-width: var(--content-md);
   padding: var(--space-1) var(--space-2);
-  max-width: var(--content-lg);
   margin: 0 auto;
 
   @media screen and (min-width: 760px) {
@@ -57,7 +57,6 @@
 }
 
 
-
 .blogPostContent {
   h2:first-of-type {
     padding-top: 0;
@@ -72,6 +71,10 @@
 
     @media screen and (min-width: 760px) {
       margin: var(--space-4) auto var(--space-8);
+    }
+
+    ul {
+      margin: var(--space-1) 0;
     }
 
     li {
@@ -125,10 +128,9 @@
   h4,
   h5,
   h6 {
-    padding: var(--space-6) 0 0;
+    padding: var(--space-6) 0 var(--space-2);
     margin: 0;
-    font-weight: var(--weight-semibold);
-    // text-align: center;
+    font-weight: var(--weight-black);
 
     a,
     .link {
@@ -140,7 +142,6 @@
     }
   }
 
-  h3,
   h4,
   h5 {
     text-transform: uppercase;
@@ -150,7 +151,10 @@
   img {
     margin: var(--space-4) auto var(--space-2);
     display: block;
-    max-width: 80%;
+    max-width: 100%;
+    border-radius: var(--radius-2);
+    border: 1px solid var(--text-1);
+    box-shadow: var(--shadow-1);
   }
 
   img + small {

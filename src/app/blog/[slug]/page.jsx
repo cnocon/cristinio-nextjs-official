@@ -8,7 +8,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { a11yLight} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { rainbow } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Tag from "../../ui/tag";
 
 // process.cwd() resolves to the repo root when the app runs.
@@ -46,7 +46,7 @@ const components = {
   code: ({ inline, className, children, ...props }) => {
     const match = /language-(\w+)/.exec(className || "");
     return !inline && match ? (
-      <SyntaxHighlighter language={match[1]} style={a11yLight} PreTag="div" {...props}>
+      <SyntaxHighlighter language={match[1]} style={rainbow } wrapLongLines PreTag="div" {...props}>
         {String(children).replace(/\n$/, "")}
       </SyntaxHighlighter>
     ) : (
