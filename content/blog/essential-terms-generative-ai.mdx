@@ -1,0 +1,126 @@
+---
+title: "Essential Terms in Generative AI: A Comprehensive Guide"
+date: "2025-02-28"
+description: "Generative AI has become one of the most transformative technologies of our time, but the field comes with its own specialized vocabulary. Whether you're a developer, business leader, or curious learner, understanding these key terms will help you navigate the generative AI landscape more effectively."
+slug: "essential-terms-generative-ai"
+tags: [
+{
+  title: "AI",
+  slug: "ai"
+}]
+---
+
+## Table of Contents
+
+## Introduction
+
+Generative AI has become one of the most transformative technologies of our time, but the field comes with its own specialized vocabulary. Whether you're a developer, business leader, or curious learner, understanding these key terms will help you navigate the generative AI landscape more effectively.
+
+## Core Concepts
+
+### Large Language Model (LLM)
+A Large Language Model is a type of artificial intelligence system trained on vast amounts of text data to understand and generate human language. LLMs like GPT-4, Claude, and LLaMA can perform a wide range of language tasks—from answering questions to writing code—without being explicitly programmed for each task. They work by predicting the next word (or token) in a sequence based on patterns learned during training.
+
+### Generative AI
+Generative AI refers to artificial intelligence systems capable of creating new content—whether that's text, images, code, audio, or video. Unlike discriminative AI, which classifies or categorizes existing data, generative AI produces novel outputs based on patterns in its training data. This is the technology behind ChatGPT, DALL-E, and other creative AI tools.
+
+### Token
+A token is the smallest unit of text that an AI model processes. Depending on the language, a token might be a word, a subword, or even a single character. For example, the phrase "Hello world" might be split into 2-3 tokens. Understanding tokenization is important because model pricing and performance often depend on token count.
+
+### Transformer
+The Transformer is the neural network architecture that powers most modern generative AI models. Introduced in 2017 through the "Attention Is All You Need" paper, Transformers use a mechanism called "attention" to understand relationships between different parts of the input, enabling them to process and generate sequences of text more effectively than previous approaches.
+
+## Training and Fine-tuning
+
+### Pre-training
+Pre-training is the initial phase where an AI model learns from massive amounts of unlabeled data—typically billions of text examples from the internet. During pre-training, the model develops a general understanding of language, facts, and reasoning patterns. This foundational knowledge can then be adapted for more specific tasks.
+
+### Fine-tuning
+Fine-tuning is the process of training a pre-trained model on a smaller, task-specific dataset. Rather than training from scratch, fine-tuning adjusts the model's weights to excel at a particular task—like customer support, medical diagnosis, or code completion. This approach is more efficient and requires less data than training from the ground up.
+
+### Prompt Engineering
+Prompt engineering is the art and science of crafting inputs (prompts) that elicit the desired output from a generative AI model. A well-engineered prompt provides context, specifies the desired format, and guides the model toward the intended response. This skill has become increasingly important as prompts are often the primary way users interact with AI systems.
+
+### In-context Learning
+In-context learning is the ability of an AI model to learn from examples provided within a single prompt, without any fine-tuning. By including a few examples of the desired task in the prompt (few-shot prompting), users can guide the model's behavior without modifying its underlying weights.
+
+## Performance and Evaluation
+
+### Hallucination
+Hallucination refers to when a generative AI model generates false, misleading, or fabricated information with confidence. A model might confidently state incorrect facts, cite non-existent sources, or invent details. Hallucinations are one of the primary limitations of current generative AI systems and require careful validation of model outputs.
+
+### Perplexity
+Perplexity is a metric that measures how well a language model predicts a sequence of text. Lower perplexity indicates better performance. It's calculated as the exponent of the average negative log probability of each token in a test set. While useful for researchers, it doesn't always correlate with real-world model usefulness.
+
+### BLEU Score
+BLEU (Bilingual Evaluation Understudy) is a metric used to evaluate the quality of machine-generated text, particularly in translation tasks. It measures how much generated text overlaps with reference text. However, BLEU has limitations and doesn't always align with human judgment of quality.
+
+### Benchmark
+A benchmark is a standardized test or dataset used to evaluate AI model performance. Common benchmarks include MMLU (for general knowledge), HumanEval (for code generation), and BoolQ (for question answering). Benchmarks help researchers compare different models objectively.
+
+## Advanced Techniques
+
+### Attention Mechanism
+Attention is a mechanism that allows a model to focus on relevant parts of the input when making predictions. Instead of treating all input equally, attention weights determine which tokens are most important for generating each output token. This mechanism is fundamental to how Transformers process information.
+
+### Embeddings
+Embeddings are numerical representations of text, where words, phrases, or documents are converted into vectors (lists of numbers) that capture their semantic meaning. Words with similar meanings have embeddings that are close to each other in vector space. Embeddings are used for similarity search, clustering, and as input to AI models.
+
+### Retrieval-Augmented Generation (RAG)
+RAG is a technique that combines retrieval and generation to improve model outputs. Instead of relying solely on information in the model's training data, RAG retrieves relevant documents or data and incorporates them into the prompt before generating a response. This approach reduces hallucinations and enables models to work with up-to-date information.
+
+### Chain of Thought (CoT)
+Chain of Thought is a prompting technique that encourages models to explain their reasoning step-by-step before providing a final answer. By asking models to "think through" problems, CoT often improves accuracy, particularly on complex reasoning tasks.
+
+## Model Architecture and Design
+
+### Parameters
+Parameters are the learnable weights in an AI model that are adjusted during training. The number of parameters (often in billions) is a rough indicator of a model's capacity and capabilities. GPT-3 has 175 billion parameters, while larger models may have hundreds of billions or trillions.
+
+### Context Window
+The context window is the maximum amount of text (measured in tokens) that a model can consider when generating a response. A larger context window allows the model to maintain awareness of more information, enabling better performance on longer documents and conversations.
+
+### Temperature
+Temperature is a hyperparameter that controls the randomness of a model's output. A lower temperature (close to 0) makes the model more deterministic and focused, while higher temperatures (closer to 1 or beyond) increase creativity and randomness. For factual tasks, lower temperatures are typically preferred.
+
+### Top-K Sampling
+Top-K sampling is a decoding technique that limits the model's next-token predictions to the K most likely tokens, then samples randomly from those. This approach reduces the likelihood of unlikely and nonsensical tokens while maintaining some randomness. It's often used alongside temperature to control output quality.
+
+## Data and Training Considerations
+
+### Training Data
+Training data is the corpus of text used to teach an AI model. The quality, diversity, and size of training data significantly impact model performance. Concerns around training data include copyright, bias, and representativeness.
+
+### Bias
+Bias in generative AI refers to systematic errors where the model makes predictions that consistently favor certain groups or perspectives. This can arise from biased training data, unequal representation of different groups, or learned associations that don't reflect reality. Addressing bias is an ongoing challenge in AI development.
+
+### Tokenization
+Tokenization is the process of splitting text into tokens. Different tokenization schemes can affect how models interpret text and how many tokens are needed to represent a given input. Subword tokenization (like Byte-Pair Encoding) is commonly used to balance vocabulary size and coverage.
+
+## Practical Applications
+
+### Zero-shot Learning
+Zero-shot learning is the ability of a model to perform a task it was never explicitly trained for, based only on a description of the task. For example, a model trained on language understanding can often translate between languages it wasn't specifically trained for translation on—this is zero-shot translation.
+
+### Few-shot Learning
+Few-shot learning is when a model learns to perform a new task from just a handful of examples, without fine-tuning. By providing a few demonstrations in the prompt, users can guide the model to solve similar problems. This is more practical than zero-shot but requires fewer examples than traditional machine learning.
+
+### Vector Database
+A vector database is a specialized database optimized for storing and searching embeddings (vectors). These databases enable semantic search, where users can find similar documents based on meaning rather than keyword matching. They're essential for implementing RAG systems.
+
+## Safety and Alignment
+
+### Alignment
+Alignment refers to the effort to ensure that AI models behave in ways that are safe, beneficial, and consistent with human values. This involves techniques like reinforcement learning from human feedback (RLHF) to make models more helpful, harmless, and honest.
+
+### RLHF (Reinforcement Learning from Human Feedback)
+RLHF is a training technique where human feedback is used to fine-tune an AI model's behavior. Initially, the model generates multiple responses to the same prompt, which are then ranked by humans. These rankings train a reward model, which then guides the training of the language model toward more preferred behaviors.
+
+### Content Moderation
+Content moderation in generative AI involves filtering or flagging outputs that violate policies—such as content that's harmful, illegal, or violates privacy. Many AI systems use a combination of automated systems and human review to ensure outputs are appropriate.
+
+## Conclusion
+
+The generative AI field is rapidly evolving, and new terms and concepts continue to emerge. This guide covers the essential vocabulary you'll encounter whether you're building with these models, studying the field, or simply staying informed about AI developments. As you deepen your engagement with generative AI, these foundational terms will help you understand more advanced discussions and make informed decisions about how to use these powerful technologies.
+
+Understanding these terms is the first step—the real learning comes from experimenting with these tools and seeing how they work in practice.

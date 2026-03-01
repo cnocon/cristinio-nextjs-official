@@ -23,7 +23,7 @@ export default function NavLinks() {
             Résumé
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href="/portfolio"
             aria-current={pathname === '/portfolio' ? 'page' : undefined}
@@ -32,7 +32,7 @@ export default function NavLinks() {
           )}>
             Portfolio
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             href="/blog"
